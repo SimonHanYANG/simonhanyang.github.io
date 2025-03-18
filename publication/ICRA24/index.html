@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weakly-Supervised Depth Completion during Robotic Micromanipulation from a Monocular Microscopic Image | Han Yang</title>
+  <meta name="description" content="Physics-based digital avatar body and garment shape and material joint optimization using differentiable simulation">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Slab:wght@100..900&family=Roboto:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../../index.html" class="home-link">Han Yang</a>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="../index.html/#about">Home</a></li>
+            <li><a href="../index.html/#featured">Publications</a></li>
+            <li><a href="../index.html/#experience">Experience</a></li>
+            <li><a href="../index.html/#posts">Posts</a></li>
+            <li><a href="../index.html/#media">Media Coverage</a></li>
+            <li><a href="../index.html/#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="publication">
+      <header class="publication-header">
+        <h1>Weakly-Supervised Depth Completion during Robotic Micromanipulation from a Monocular Microscopic Image</h1>
+
+        <div class="authors">
+          <div class="author">
+            <a href="https://simonhanyang.github.io/" class="author-name">Han Yang</a>
+            <span class="author-affiliation">CUHK(Shenzhen)</span>
+          </div>
+
+          <div class="author">
+            <a href="#" class="author-name">Yufei Jin</a>
+            <span class="author-affiliation">CUHK(Shenzhen)</span>
+          </div>
+
+          <div class="author">
+            <a href="https://faculty.dlut.edu.cn/gqshan/zh_CN/index.htm" class="author-name">Guanqiao Shan</a>
+            <span class="author-affiliation">UofT</span>
+          </div>
+
+          <div class="author">
+            <a href="#" class="author-name">Yibin Wang</a>
+            <span class="author-affiliation">CUHK(Shenzhen)</span>
+          </div>
+
+          <div class="author">
+            <a href="#" class="author-name">Yongbin Zheng</a>
+            <span class="author-affiliation">CUHK(Shenzhen)</span>
+          </div>
+
+          <div class="author">
+            <a href="https://sse.cuhk.edu.cn/en/faculty/yujiangfan" class="author-name">Jiangfan Yu</a>
+            <span class="author-affiliation">CUHK(Shenzhen)</span>
+          </div>
+
+          <div class="author">
+            <a href="https://faculty.dlut.edu.cn/zhangzhuoran/zh_CN/index.htm" class="author-name">Zhuoran Zhang</a>
+            <span class="author-affiliation">CUHK(Shenzhen)</span>
+          </div>
+
+          <div class="author">
+            <a href="https://amnl.mie.utoronto.ca/index.php?page=research" class="author-name">Yu Sun</a>
+            <span class="author-affiliation">UofT</span>
+          </div>
+
+        </div>
+
+        <div class="publication-venue">
+          <h4>IEEE International Conference on Robotics and Automation <strong>(ICRA)</strong> 2024</h4>
+        </div>
+
+        <div class="publication-links">
+          <a href="https://ieeexplore.ieee.org/document/10611357" class="pub-link">PDF</a>
+          <a href="#citation" class="pub-link">Cite</a>
+          <a href="https://events.infovaya.com/login" class="pub-link">Video</a>
+          <a href="#" class="pub-link">Code (Coming Soon...)</a>
+        </div>
+      </header>
+
+      <div class="teaser-image">
+        <img src="image/ICRA24_3096_GraphicAbstract.jpg" alt="Weakly-Supervised Depth Completion during Robotic Micromanipulation from a Monocular Microscopic Image">
+      </div>
+
+      <section class="abstract">
+        <h2>Abstract</h2>
+        <p>
+          Obtaining three-dimensional information, especially the z-axis depth information, is crucial for robotic micromanipulation. Due to the unavailability of depth sensors such as lidars in micromanipulation setups, traditional depth acquisition methods such as depth from focus or depth from defocus directly infer depth from microscopic images and suffer from poor resolution. Alternatively, micromanipulation tasks obtain accurate depth information by detecting the contact between an end-effector and an object (e.g., a cell). Despite its high accuracy, only sparse depth data can be obtained due to its low efficiency.
+        </p>
+        <p>
+          This paper aims to address the challenge of acquiring dense depth information during robotic cell micromanipulation. A weakly-supervised depth completion network is proposed to take cell images and sparse depth data obtained by contact detection as input to generate a dense depth map. A two-stage data augmentation method is proposed to augment the sparse depth data, and the depth map is optimized by a network refinement method.
+        </p>
+        <p>
+          The experimental results show that the MAE value of the depth prediction error is less than 0.3 mu m, which proves the accuracy and effectiveness of the method. This deep learning network pipeline can be seamlessly integrated with the robotic micromanipulation tasks to provide accurate depth information.
+        </p>
+      </section>
+
+      <section class="pipeline">
+        <h2>Pipeline</h2>
+        <div class="section-content">
+          <div class="section-image">
+            <img src="image/paper1_flow_chart.png" alt="2D garment pattern representation">
+          </div>
+          <p>
+            The pipeline first plans regions for contact detection, then in each region automated contact detection is performed only once to avoid repeated experiments on regions with similar image features. The collected sparse depth data are then augmented and fed into a depth completion network, followed by a refinement process to generate a dense depth map.
+          </p>
+        </div>
+      </section>
+
+      <!-- <section class="garment-representation">
+        <h2>Garment 2D Representation</h2>
+        <div class="section-content">
+          <div class="section-image">
+            <img src="https://ext.same-assets.com/2974231645/646604055.png" alt="2D garment pattern representation">
+          </div>
+          <p>Garments can take on a wide range of 3D shapes when draped onto a body, due to factors such as changing pose and dynamics or wearer manipulations. Despite this large variation in configurations, garments are compactly represented by their 2D patterns (Fig. 3), which consist of the individual pieces of fabric that are sewn together to create the 3D clothing. Therefore, we represent clothing in 2D pattern space, which ensures developable meshes and manufacturable clothing. Virtual garments are modeled as triangle meshes, with their rest shape encoded in these 2D patterns. The rest shape is crucial for modeling the in-plane stretching and shearing behavior of different fabrics.</p>
+        </div>
+      </section>
+
+      <section class="control-cage">
+        <h2>Control Cage Garment Shape Optimization</h2>
+        <div class="section-content">
+          <p>We propose a regularized differentiable cage formulation to effectively and robustly optimize for the 2D patterns of garments such that the simulated and draped 3D representation of the garment closely aligns with the scan.</p>
+
+          <h3>Control Cage Pattern Representation</h3>
+          <div class="section-image">
+            <img src="https://ext.same-assets.com/3271614297/915632661.png" alt="Control cage pattern representation">
+          </div>
+
+          <p>While it is possible to directly optimize for the 2D pattern vertices p directly, this approach is highly non-regularized and can produce ill-shaped or even non-physical inverted rest shape geometries that cause simulators to fail.</p>
+
+          <p>A high number of optimization variables can also cause the optimization to get stuck in a local minimum (See our ablation study in Sec. 5.4). Additionally, directly optimizing for the 2D coordinates does not respect design constraints that are better represented in a limited subspace of reasonable designs. Therefore, we further regulate the optimization problem by selecting and optimizing a set of 2D control vertices on the boundaries of the individual panels of the 2D pattern that directly deform and manipulate the underlying 2D patterns through control cages instead.</p>
+
+          <h3>Control Cage Handle Selection</h3>
+          <p>We use the geometric information of the 2D garment patterns to automatically identify control cage points, see the inset figure above. Our algorithm first extracts the boundary loop of the underlying mesh for each connected component representing a garment panel in the 2D garment pattern, then processes the boundary loop and marks a vertex as a control point if it lies on the convex hull of the pattern or when its local curvature exceeds a threshold (10° in our implementation).</p>
+        </div>
+      </section>
+
+      <section class="demo">
+        <h2>Demo</h2>
+        <div class="video-container">
+          <iframe width="100%" height="400" src="https://www.youtube.com/embed/vH2MCXneAUE" title="DiffAvatar: Simulation-Ready Garment Optimization with Differentiable Simulation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </section> -->
+
+      <section id="citation" class="citation">
+        <h2>Citation</h2>
+        <div class="citation-box">
+          <pre>@inproceedings{yang2024weakly,
+                title={Weakly-Supervised Depth Completion during Robotic Micromanipulation from a Monocular Microscopic Image},
+                author={Yang, Han and Jin, Yufei and Shan, Guanqiao and Wang, Yibin and Zheng, Yongbin and Yu, Jiangfan and Sun, Yu and Zhang, Zhouran},
+                booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)},
+                pages={15615--15621},
+                year={2024},
+                organization={IEEE}
+              }
+          </pre>
+        </div>
+        <div class="citation-actions">
+          <button id="copy-citation" class="citation-btn">Copy</button>
+          <a href="#" class="citation-btn">Download</a>
+        </div>
+      </section>
+
+      <section class="keywords">
+        <h2>Keywords</h2>
+        <p>Biological Cell Manipulation, Automation at Micro/Nano Scales, Deep Learning, Depth Completion</p>
+        <div class="tag-list">
+          <a href="graphics/" class="tag">Biological Cell Manipulation</a>
+          <a href="physical-simulation/" class="tag">Automation at Micro/Nano Scales</a>
+          <a href="digital-avatar/" class="tag">Deep Learning</a>
+          <a href="differentiable-simulation/" class="tag">Depth Completion</a>
+        </div>
+      </section>
+
+      <!-- <section class="related">
+        <h2>Related</h2>
+        <ul class="related-list">
+          <li><a href="/liyifei/publication/neuralfluid/">NeuralFluid: Neural Fluidic System Design and Control with Differentiable Simulation</a></li>
+          <li><a href="/liyifei/publication/diffcloth/">DiffCloth: Differentiable Cloth Simulation with Dry Frictional Contact</a></li>
+          <li><a href="/liyifei/publication/anisotropicstokes/">Fluidic Topology Optimization with an Anisotropic Mixture Model</a></li>
+          <li><a href="/liyifei/publication/animateddrawings/">A Method for Automatically Animating Children's Drawings of the Human Figure</a></li>
+          <li><a href="/liyifei/publication/joinable-learning-bottom-up-assembly-of-parametric-cad-joints/">JoinABLe: Learning Bottom-up Assembly of Parametric CAD Joints</a></li>
+        </ul>
+      </section> -->
+      
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Han Yang | 愿未来胜过往</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

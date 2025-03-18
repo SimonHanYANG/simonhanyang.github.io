@@ -1,3590 +1,546 @@
 <!DOCTYPE html>
-<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: August 23, 2023 -->
-<html lang="en-us">
-
-
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-
-
-  <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-
-
-
-
-
-
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap"
-    media="print" onload="this.media='all'">
-
-
-
-
-
-
-
-
-
-
-
-  <link rel="stylesheet" href="/css/vendor-bundle.min.047268c6dd09ad74ba54a0ba71837064.css" media="print"
-    onload="this.media='all'">
-
-
-
-
-
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css"
-    integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg=="
-    crossorigin="anonymous" media="print" onload="this.media='all'">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
-    integrity="sha512-H9jrZiiopUdsLpg94A333EfumgUBpO9MdbxStdeITo+KEIMaNfHNvwyjjDJb+ERPaRS6DpyRlKbvPUasNItRyw=="
-    crossorigin="anonymous" media="print" onload="this.media='all'">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <link rel="stylesheet" href="/css/wowchemy.ff367a62281f7f15ab2ef6afd32dec0a.css" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print"
-    onload="this.media='all'">
-  <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'"
-    disabled>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <meta name="author" content="Simon, Han YANG" />
-
-
-
-
-
-
-
-  <meta name="description"
-    content="A highly-customizable Hugo academic resume theme powered by Wowchemy website builder." />
-
-
-
-  <link rel="alternate" hreflang="en-us" href="https://example.com/" />
-  <link rel="canonical" href="https://example.com/" />
-
-
-
-  <link rel="manifest" href="/manifest.webmanifest" />
-
-
-
-  <link rel="icon" type="image/png"
-    href="/media/simonyang.png" />
-  <link rel="apple-touch-icon" type="image/png"
-    href="/media/simonyang.png" />
-
-  <!-- <meta name="theme-color" content="#795548" /> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <meta property="twitter:card" content="summary" />
-
-  <meta property="twitter:site" content="@wowchemy" />
-  <meta property="twitter:creator" content="@wowchemy" />
-  <meta property="twitter:image"
-    content="https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" />
-  <meta property="og:site_name" content="Academic" />
-  <meta property="og:url" content="https://example.com/" />
-  <meta property="og:title" content="Academic" />
-  <meta property="og:description"
-    content="A highly-customizable Hugo academic resume theme powered by Wowchemy website builder." />
-  <meta property="og:image"
-    content="https://example.com/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png" />
-  <meta property="og:locale" content="en-us" />
-
-
-  <meta property="og:updated_time" content="2022-10-24T00:00:00&#43;00:00" />
-
-
-
-
-
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://example.com/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  },
-  "url": "https://example.com/"
-}
-</script>
-
-
-
-
-
-
-
-
-
-
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-
-
-
-  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Academic" />
-
-
-
-
-
-
-  <title>Simon Han YANG</title>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Han Yang</title>
+  <meta name="description" content="Han YANG. CIE PhD student at CUHK(Shenzhen) working in 3D Perception in Micromanipulation">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
-
-<body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" class="page-wrapper   "
-  data-wc-page-id="3976528693a0108357f4928017600865">
-
-
-
-
-
-
-
-
-
-
-  <script src="/js/wowchemy-init.min.fe8634e7d00f14d07fb33caf14cc8e55.js"></script>
-
-
-
-
-  <aside class="search-modal" id="search">
+<body>
+  <!-- Header/Navigation -->
+  <header class="site-header">
     <div class="container">
-      <section class="search-header">
-
-        <div class="row no-gutters justify-content-between mb-3">
-          <div class="col-6">
-            <h1>Search</h1>
-          </div>
-          <div class="col-6 col-search-close">
-            <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted"
-                aria-hidden="true"></i></a>
-          </div>
-        </div>
-
-        <div id="search-box">
-
-          <input name="q" id="search-query" placeholder="Search..." autocapitalize="off" autocomplete="off"
-            autocorrect="off" spellcheck="false" type="search" class="form-control" aria-label="Search...">
-
-        </div>
-
-
-
-
-
-
-      </section>
-      <section class="section-search-results">
-
-        <div id="search-hits">
-
-        </div>
-
-      </section>
-    </div>
-  </aside>
-
-
-
-  <div class="page-header header--fixed">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
-        <div class="container-xl">
-
-
-          <div class="d-none d-lg-inline-flex">
-            <a class="navbar-brand" href="/">Simon YANG</a>
-          </div>
-
-
-
-          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-content"
-            aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
-            <span><i class="fas fa-bars"></i></span>
+      <div class="header-content">
+        <div class="header-left">
+          <button class="search-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
           </button>
 
-
-
-          <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-            <a class="navbar-brand" href="/">Simon YANG</a>
-          </div>
-
-
-
-
-          <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
-
-
-            <ul class="navbar-nav d-md-inline-flex">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <li class="nav-item">
-                <a class="nav-link " href="/#about" data-target="#about"><span>Home</span></a>
-              </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <!-- <li class="nav-item">
-            <a class="nav-link " href="/#projects" data-target="#projects"><span>Projects</span></a>
-          </li> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <li class="nav-item">
-                <a class="nav-link " href="/#featured" data-target="#featured"><span>Publications</span></a>
-              </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <li class="nav-item">
-                <a class="nav-link " href="/#contact" data-target="#contact"><span>Contact</span></a>
-              </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <li class="nav-item">
-                <a class="nav-link " href="/uploads/Han_Simon_YANG_Academic_CV.pdf"><span>CV</span></a>
-              </li>
-
-
-
-
-
-
-
-            </ul>
-          </div>
-
-          <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
-
-
-
-
-
-
-
-
-
-            <li class="nav-item">
-              <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search"
-                  aria-hidden="true"></i></a>
-            </li>
-
-
-
-
-
-
-
-
-
+          <a href="#" class="site-title">Han Yang</a>
+        </div>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#about">Home</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#posts">Posts</a></li>
+            <li><a href="#media">Media Coverage</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
-
-        </div>
-      </nav>
-    </header>
-
-
-  </div>
-
-  <div class="page-body">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <span class="js-widget-page d-none"></span>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section id="about" class="home-section wg-about-biography  ">
-      <div class="home-section-bg ">
-
+        </nav>
+
+        <button class="mobile-menu-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
       </div>
-      <div class="container">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <div class="row">
-          <div class="col-12 col-lg-4">
-            <div id="profile">
-
-
-
-              <!-- <img class="avatar avatar-circle"
-           width="270" height="270"
-           src="/authors/rick-li/avatar_hua161319c99eeaf7879c801f0f15a1317_156753_270x270_fill_q75_lanczos_center.jpg" alt="Rick Li 李晓童(Xiaotong)"> -->
-              <img class="avatar avatar-circle" width="270" height="270" src="/authors/rick-li/han.jpg"
-                alt="Simon, Han YANG 杨涵">
-
-
-              <div class="portrait-title">
-
-                <h2>Simon, Han YANG</h2>
-
-                <h3>Ph.D. of Computer Information Engineer</h3>
-
-
-                <h3>
-                  <a href="https://www.cuhk.edu.cn/en" target="_blank" rel="noopener">
-                    <span>The Chinese University of Hong Kong, Shenzhen</span>
-                  </a>
-                </h3>
-
-              </div>
-
-              <ul class="network-icon" aria-hidden="true">
-
-
-
-
-
-
-
-
-
-
-
-
-                <li>
-                  <a href="/#contact" aria-label="envelope">
-                    <i class="fas fa-envelope big-icon"></i>
-                  </a>
-                </li>
-
-
-
-
-
-
-
-
-
-
-
-
-                <li>
-                  <a href="https://github.com/SimonHanYANG" target="_blank" rel="noopener" aria-label="github">
-                    <i class="fab fa-github big-icon"></i>
-                  </a>
-                </li>
-
-
-
-
-
-
-
-
-
-
-                <li>
-                  <a href="/uploads/SimonYang_CV.pdf" aria-label="cv">
-                    <i class="ai ai-cv big-icon"></i>
-                  </a>
-                </li>
-
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="container">
+    <div class="content-wrapper">
+      <!-- Profile Sidebar -->
+      <aside class="profile-sidebar">
+        <div class="profile-card">
+          <div class="profile-image">
+            <img src="image/han.jpg" alt="Han Yang">
+          </div>
+          <div class="profile-info">
+            <h1>Han Yang</h1>
+            <div class="profile-title">
+              <span class="divider">|</span>
+              <span>CIE PhD Student</span>
+            </div>
+            <div class="profile-institution">
+              The Chinese University of Hong Kong, Shenzhen
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                </svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect width="4" height="12" x="2" y="9"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                  <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                </svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="m12 2-5.5 9h11L12 2z"/>
+                  <circle cx="17.5" cy="17.5" r="3.5"/>
+                  <circle cx="6.5" cy="17.5" r="3.5"/>
+                </svg>
+              </a>
+              <a href="#" class="social-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </a>
+            </div>
+
+            <div class="sidebar-section">
+              <h2>Interests</h2>
+              <ul class="interests-list">
+                <li>• Robotics Micromanipulation</li>
+                <li>• In vitro fertilization (IVF)</li>
+                <li>• 3D Visual Perception</li>
+                <li>• Cell Surgery</li>
               </ul>
+            </div>
 
+            <div class="sidebar-section">
+              <h2>Education</h2>
+              <div class="education-items">
+                <div class="education-item">
+                  <div class="education-details">
+                    <div class="institution">The Chinese University of Hong Kong, Shenzhen</div>
+                    <div class="degree">Ph.D. in CIE</div>
+                  </div>
+                  <div class="education-years">2023- Present</div>
+                </div>
+
+                <div class="education-item">
+                  <div class="education-details">
+                    <div class="institution">Dalian University of Technology</div>
+                    <div class="degree">Research Assistant</div>
+                  </div>
+                  <div class="education-years">2025 - Present</div>
+                </div>
+
+                <div class="education-item">
+                  <div class="education-details">
+                    <div class="institution">Hong Kong Baptist University</div>
+                    <div class="degree">B.S. in Computer Science</div>
+                  </div>
+                  <div class="education-years">2019 - 2023</div>
+                </div>
+
+                <div class="education-item">
+                  <div class="education-details">
+                    <div class="institution">Nanyang Technological University</div>
+                    <div class="degree">Research Assistant in Medical Image Processing</div>
+                  </div>
+                  <div class="education-years">2022.07 - 2022.09</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-section">
+              <h2>Academic Service</h2>
+              <div class="service-items">
+                <div class="service-item">
+                  <div class="service-title">Reviewer:</div>
+                  <ul class="service-list">
+                    <li>• <span class="service-category">Journal:</span> T-ASE, RA-L, T-BME</li>
+                    <li>• <span class="service-category">Conference:</span> ICRA, IROS</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-12 col-lg-8">
+        </div>
+      </aside>
 
+      <!-- Main Content -->
+      <div class="main-content">
+        <section id="about" class="content-section">
+          <p>
+            I am Simon, Han YANG! Currently I am a Ph.D. Candidate majored in <a href="https://sse-mphil-phd.cuhk.edu.cn/en/program/CIE" class="accent-link">Computer and Information Engineering(CIE)</a> at Medical Micro Robotics Lab(MMRL), <a href="https://www.cuhk.edu.cn/en" class="accent-link">The Chinese University of Hong Kong, Shenzhen(CUHKsz)</a> supervised by <a href="https://faculty.dlut.edu.cn/zhangzhuoran/zh_CN/index.htm" class="accent-link">Prof. Zhuoran Zhang</a> and <a href="https://sse.cuhk.edu.cn/en/faculty/yujiangfan" class="accent-link">Prof. Jiangfan Yu</a>.
+          </p>
+          <p>
+            Before that, I received my B.S. degree from <a href="https://www.hkbu.edu.hk/" class="accent-link">Hong Kong Baptist University</a> and worked as a research assistant at <a href="https://aidsrh.uic.edu.cn/" class="accent-link">Key Laboratory for Artificial Intelligence and Multi-Modal Data Processing of Department of Education of Guangdong Province</a> in <a href="https://www.uic.edu.cn/en/" class="accent-link">Beijing Normal-Hong Kong Baptist University(BNBU)</a> working with <a href="https://staff.uic.edu.cn/amyzhang/en" class="accent-link">Prof. Amy Hui Zhang</a> until 2023.
+          </p>
+          <p>
+            My research interests include robotics micromanipulation system, cell surgery, 3D Visual Perception.
+          </p>
+          <p>
+            You can email me at hayang12 [at] link [dot] cuhk [dot] edu [dot] cn.
+          </p>
+        </section>
 
-            <h1>Biography</h1>
+        <section id="news" class="content-section">
+          <h2>News</h2>
+          <div class="news-list">
+            <div class="news-item">
+              <div class="news-date">[2025/01]</div>
+              <div class="news-content">
+                Starting research assistant at Institute of Robotics and Intelligent Systems(IRIS) in <a href="https://en.dlut.edu.cn/" class="accent-link">Dalian University of Technology</a> working with <a href="https://faculty.dlut.edu.cn/zhangzhuoran/zh_CN/index.htm" class="accent-link">Prof. Zhuoran Zhang</a>!
+              </div>
+            </div>
 
+            <div class="news-item">
+              <div class="news-date">[2025/01]</div>
+              <div class="news-content">
+                One paper is accepted to <a href="https://2025.ieee-icra.org/" class="accent-link">ICRA2025</a>. See you in Atlanta at ICRA25!
+              </div>
+            </div>
 
-            <div class="article-style">
-              <p style="text-align: justify;">Attention! I am Simon, Han YANG! Currently I am a Ph.D. Candidate majored
-                in <a href="https://sse-mphil-phd.cuhk.edu.cn/en/program/CIE">Computer and Information Engineering(CIE)</a> at
-                <a href="#">Medical Micro Robotics Lab(MMRL)</a>, <a href="https://www.cuhk.edu.cn/en">The Chinese
-                  University of Hong Kong, Shenzhen(CUHKsz)</a> supervised by <a
-                  href="https://faculty.dlut.edu.cn/zhangzhuoran/zh_CN/index.htm">Prof. Zhuoran ZHANG</a> and <a
-                  href="https://sse.cuhk.edu.cn/en/faculty/yujiangfan">Prof. Jiangfan YU</a>. 
+            <div class="news-item">
+              <div class="news-date">[2024/09]</div>
+              <div class="news-content">
+                Starting teaching assistant at <a href="#" class="accent-link">Introduction to Computer Science: Programming Methodology</a>.
+              </div>
+            </div>
+
+            <div class="news-item">
+              <div class="news-date">[2024/01]</div>
+              <div class="news-content">
+                Starting peer reviewer at <a href="https://www.ieee-ras.org/publications/t-ase" class="accent-link">T-ASE</a>, <a href="https://www.ieee-ras.org/publications/ra-l" class="accent-link">R-AL</a> and ICRA.
+              </div>
+            </div>
+
+            <div class="news-item">
+              <div class="news-date">[2024/01]</div>
+              <div class="news-content">
+                One paper is accepted to <a href="https://2024.ieee-icra.org/" class="accent-link">ICRA2024</a>. See you in Yokohama at ICRA24!
+              </div>
+            </div>
+
+            <div class="news-item">
+              <div class="news-date">[2024/01]</div>
+              <div class="news-content">
+                Starting teaching assistant at <a href="#" class="accent-link">Calculus II</a>.
+              </div>
+            </div>
+
+            <div class="news-item">
+              <div class="news-date">[2023/09]</div>
+              <div class="news-content">
+                Starting teaching assistant at <a href="#" class="accent-link">Calculus I</a>.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="publications" class="content-section">
+          <h2>Publications</h2>
+
+          <div class="publication-card">
+            <div class="publication-image">
+              <a href="./publication/ICRA24/index.html">
+                <img src="publication/ICRA24/image/icra24.png" alt="Weakly-Supervised Depth Completion during Robotic Micromanipulation from a Monocular Microscopic Image">
+              </a>
+            </div>
+            <div class="publication-details">
+              <h3 class="publication-title">
+                <a href="./publication/ICRA24/index.html">Weakly-Supervised Depth Completion during Robotic Micromanipulation from a Monocular Microscopic Image</a>
+              </h3>
+              <div class="publication-authors">
+                <a href="#" class="author-link">Han Yang</a>,
+                <a href="#" class="author-link">Yufei Jin</a>,
+                <a href="#" class="author-link">Guanqiao Shan</a>,
+                <a href="#" class="author-link">Yibin Wang</a>,
+                <a href="#" class="author-link">Yongbin Zheng</a>,
+                <a href="#" class="author-link">Jiangfan Yu</a>,
+                <a href="https://amnl.mie.utoronto.ca/index.php?page=research" class="author-link">Yu Sun</a>,
+                <a href="#" class="author-link">Zhuoran Zhang</a>
+              </div>
+              <div class="publication-venue">
+                <span class="venue-name">International Conference on Robotics and Automation (ICRA)</span>
+                <span class="publication-date">Jan 2024</span>
+              </div>
+              <p class="publication-description">
+                This paper aims to address the challenge of acquiring dense depth information during robotic cell micromanipulation. A weakly-supervised depth completion network is proposed to take cell images and sparse depth data obtained by contact detection as input to generate a dense depth map.
               </p>
-              <p style="text-align: justify;">
-                Before that, I received my B.S. degree from <a href="https://www.hkbu.edu.hk/">Hong Kong Baptist University</a> and worked as a research assistant at <a
-                  href="https://aidsrh.uic.edu.cn/">Key Laboratory for Artificial Intelligence and Multi-Modal Data
-                  Processing of Department of Education of Guangdong Province</a> in <a
-                  href="https://www.uic.edu.cn/en/">Beijing Normal-Hong Kong Baptist University(BNBU)</a> working with <a
-                  href="https://staff.uic.edu.cn/amyzhang/en">Prof. Amy Hui ZHANG</a> until 2023.
+              <div class="publication-links">
+                <a href="https://ieeexplore.ieee.org/document/10611357/" class="publication-link">PDF</a>
+                <a href="https://ieeexplore.ieee.org/document/10611357/" class="publication-link">Cite</a>
+                <!-- <a href="#" class="publication-link">DOI</a> -->
+                <!-- <a href="#" class="publication-link">arXiv</a> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="publication-card">
+            <div class="publication-image">
+              <a href="#">
+                <img src="publication/IEEE-NSEN24/image/ieeensen24.png" alt="Depth Estimation for Motile Cell under Monocular Microscopy Based on Fine-grained Classification">
+              </a>
+            </div>
+            <div class="publication-details">
+              <h3 class="publication-title">
+                <a href="#">Depth Estimation for Motile Cell under Monocular Microscopy Based on Fine-grained Classification</a>
+              </h3>
+              <div class="publication-authors">
+                <a href="#" class="author-link">Han Yang</a>,
+                <a href="#" class="author-link">Yufei Jin</a>,
+                <a href="#" class="author-link">Xinrui Wang</a>,
+                <a href="#" class="author-link">Zhuoran Zhang</a>,
+              </div>
+              <div class="publication-venue">
+                <span class="venue-name">IEEE International Conference on Micro/Nano Sensors for AI, Healthcare and Robotics[IEEE-NSENS 24], Best Paper</span>
+                <span class="publication-date">Feb 2024</span>
+              </div>
+              <p class="publication-description">
+                  This paper models depth estimation as a multi-class classification task and introduces a fine-grained feature extraction block to discern subtle distinctions between focal planes.
               </p>
-              <p style="text-align: justify;">My research interests include robotics micromanipulation system, cell
-                surgery, 3D reconstruction under microscopic environment.</p>
-              <p style="text-align: justify;">You can email me at hayang12 [at] link [dot] cuhk [dot] edu [dot] cn.</p>
-            </div>
-
-
-            <div class="row">
-
-
-              <div class="col-md-5">
-                <div class="section-subheading">Interests</div>
-                <ul class="ul-interests fa-ul mb-0">
-
-                  <li>
-                    <i class="fa-li fa-solid fa-book"></i>
-                    Robotics Micromanipulation
-                  </li>
-
-                  <li>
-                    <i class="fa-li fa-solid fa-book"></i>
-                    Cell Surgery
-                  </li>
-
-                  <li>
-                    <i class="fa-li fa-solid fa-book"></i>
-                    In vitro fertilization (IVF)
-                  </li>
-
-                  <li>
-                    <i class="fa-li fa-solid fa-book"></i>
-                    3D Visual Perception
-                  </li>
-
-                  <li>
-                    <i class="fa-li fa-solid fa-book"></i>
-                    3D Reconstruction
-                  </li>
-
-                </ul>
+              <div class="publication-links">
+                <a href="#" class="publication-link">PDF</a>
+                <a href="#" class="publication-link">Cite</a>
               </div>
-
-
-
-              <div class="col-md-7">
-                <div class="section-subheading">Education</div>
-                <ul class="ul-edu fa-ul mb-0">
-
-                  <li>
-                    <i class="fa-li fa-solid fa-graduation-cap"></i>
-                    <div class="description">
-                      <p class="course">Ph.D in Computer and Information Engineering, 2023 ~ now</p>
-                      <p class="institution">The Chinese University of Hong Kong, Shenzhen, China</p>
-                    </div>
-                  </li>
-
-                  <li>
-                    <i class="fa-li fa-solid fa-graduation-cap"></i>
-                    <div class="description">
-                      <p class="course">Research Assistant & Engineer, 2025 ~ now</p>
-                      <p class="institution">Dalian University of Technology, China</p>
-                    </div>
-                  </li>
-
-                  <li>
-                    <i class="fa-li fa-solid fa-graduation-cap"></i>
-                    <div class="description">
-                      <p class="course">BEng in Computer Science, 2019 ~ 2023</p>
-                      <p class="institution">Hong Kong Baptist University, China</p>
-                    </div>
-                  </li>
-
-                  <li>
-                    <i class="fa-li fa-solid fa-graduation-cap"></i>
-                    <div class="description">
-                      <p class="course">Summer School in Medical Image Processing, 2022.07 ~ 09</p>
-                      <p class="institution">Nanyang Technological University, Singapore</p>
-                    </div>
-                  </li>
-
-                </ul>
-              </div>
-
-
             </div>
           </div>
-        </div>
 
-
-
-
-      </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section id="section-experience" class="home-section wg-experience  ">
-      <div class="home-section-bg ">
-
-      </div>
-      <div class="container">
-
-
-        <div class="row  ">
-
-
-          <div
-            class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
-            <h1 class="mb-0">News Update</h1>
-
+          <div class="publication-card">
+            <div class="publication-image">
+              <a href="#">
+                <img src="publication/HQNet/image/HQNet.png" alt="WTBNeRF: Wind Turbine Blade 3D Reconstruction by Neural Radiance Fields ">
+              </a>
+            </div>
+            <div class="publication-details">
+              <h3 class="publication-title">
+                <a href="#">HQNet: An Efficient Convolutional Neural Network for Cervical Cancer Classification</a>
+              </h3>
+              <div class="publication-authors">
+                <a href="#" class="author-link">Han Yang</a>,
+                <a href="#" class="author-link">Teoh Teik Toe</a>
+              </div>
+              <div class="publication-venue">
+                <span class="venue-name">IEEE on International Conference on Biomedical Imaging, Signal Processing (ICBSP)</span>
+                <span class="publication-date">Sep 2022</span>
+              </div>
+              <p class="publication-description">
+                In this paper, an efficient deformable convolutional neural network system(HQNet) was constructed to identify Cervical Cancer cells with different degrees of development. A framework for bringing children's drawings of human figures to life.
+              </p>
+              <div class="publication-links">
+                <a href="https://confsys.iconf.org/Uploads//2022-08-16/62fb32ec15578.pdf" class="publication-link">PDF</a>
+                <a href="https://confsys.iconf.org/Uploads//2022-08-16/62fb32ec15578.pdf" class="publication-link">Cite</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="publication-card">
+            <div class="publication-image">
+              <a href="#">
+                <img src="publication/WTBNeRF/image/WTBNeRF.png" alt="WTBNeRF: Wind Turbine Blade 3D Reconstruction by Neural Radiance Fields">
+              </a>
+            </div>
+            <div class="publication-details">
+              <h3 class="publication-title">
+                <a href="#">WTBNeRF: Wind Turbine Blade 3D Reconstruction by Neural Radiance Fields</a>
+              </h3>
+              <div class="publication-authors">
+                <a href="#" class="author-link">Han Yang</a>,
+                <a href="#" class="author-link">Linchuan Tang</a>,
+                <a href="#" class="author-link">Hui Ma</a>,
+                <a href="#" class="author-link">Rongfeng Deng</a>,
+                <a href="#" class="author-link">Hui Zhang</a>
+              </div>
+              <div class="publication-venue">
+                <span class="venue-name">International conference on the Efficiency and Performance Engineering Network (TEPEN)</span>
+                <span class="publication-date">Aug 2022</span>
+              </div>
+              <p class="publication-description">
+                The method we use, called WTBNeRF is a network dedicated to wind turbine scene rendering and 3D reconstruction of wind turbines.
+              </p>
+              <div class="publication-links">
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-26193-0_60" class="publication-link">PDF</a>
+                <a href="https://link.springer.com/chapter/10.1007/978-3-031-26193-0_60" class="publication-link">Cite</a>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <section id="experience" class="content-section">
+          <h2>Experience</h2>
+
+          <div class="experience-card">
+            <div class="experience-logo">
+              <a href="https://theaiinstitute.com/" target="_blank">
+                <img src="https://www.dlut.edu.cn/images/new/logoft.png" alt="IRIS">
+              </a>
+            </div>
+            <div class="experience-details">
+              <div class="experience-header">
+                <div class="experience-title-company">
+                  <h3 class="experience-title">Research Intern</h3>
+                  <div class="experience-company">
+                    <a href="#" class="accent-link">Institute of Robotics and Intelligent Systems, IRIS</a>
+                  </div>
+                </div>
+                <div class="experience-meta">
+                  <div class="experience-duration">Jan 2025 — Present</div>
+                  <div class="experience-location">Dalian, China</div>
+                </div>
+              </div>
+              <p class="experience-description">
+                Robotic Micromanipulation System, IVF, Cell Surgery, 3D Visual Perception
+              </p>
+            </div>
           </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-          <div class="col-12 col-lg-8">
-
-
-
-            <div class="row experience">
-
-              <div class="col-auto text-center flex-column d-none d-sm-flex">
-                <div class="row h-50">
-                  <div class="col border-right">&nbsp;</div>
-                  <div class="col">&nbsp;</div>
-                </div>
-                <div class="m-2">
-                  <span class="badge badge-pill border ">&nbsp;</span>
-                </div>
-                <div class="row h-50">
-                  <div class="col ">&nbsp;</div>
-                  <div class="col">&nbsp;</div>
-                </div>
-              </div>
-
-              <div class="col py-2">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex align-content-start">
-                      <div class="mr-2 mb-2"><a href="https://www.cuhk.edu.cn/en" target="_blank" rel="noopener"><img
-                            src="/media/icons/brands/Dalian_University_of_Technology_logo.png" width="56px" height="56px"
-                            alt="Bayer Crop Science Co. Ltd." loading="lazy"></a></div>
-                      <div>
-
-
-                        <div class="section-subheading card-title exp-title text-muted my-0">Research Assistant & Engineer
-                        </div>
-                        <div class="section-subheading card-title exp-company text-muted my-0"><a
-                            href="https://www.cuhk.edu.cn/en" target="_blank" rel="noopener">Dalian University of Technology</a></div>
-                        <div class="text-muted exp-meta">
-                          Jan. 2025 –
-
-                          now
-
-
-                          <span class="middot-divider"></span>
-                          <span>Dalian, China</span>
-
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="card-text">Institute of Robotics and Intelligent Systems, IRIS</div>
+          <div class="experience-card">
+            <div class="experience-logo">
+              <a href="https://theaiinstitute.com/" target="_blank">
+                <img src="https://www.uic.edu.cn/virtual_attach_file.vsb?afc=5nNMC7L7CYol7PMQmMRM7CZLz-YUNCq4MzU4oz9iM8W2UmL0gihFp2hmCIa0LSh7UYyPUYhVU4GYnRlbMzWkMmGiM7Q2M4Q2n7VfMRlDn7VFLmLYU87sMmrFMR7so7LJqjfjo4OeosrXCYhXptQ0gY84gY84gtA8pUpcc&e=.jpg" alt="BNBU Key Lab">
+              </a>
+            </div>
+            <div class="experience-details">
+              <div class="experience-header">
+                <div class="experience-title-company">
+                  <h3 class="experience-title">Research Intern</h3>
+                  <div class="experience-company">
+                    <a href="https://aidsrh.uic.edu.cn/" class="accent-link">Key Laboratory for Artificial Intelligence and Multi-Modal Data Processing of Department of Education of Guangdong Province</a>
                   </div>
                 </div>
+                <div class="experience-meta">
+                  <div class="experience-duration">Sep 2021 — Jun 2023</div>
+                  <div class="experience-location">Zhuhai, China</div>
+                </div>
               </div>
+              <p class="experience-description">
+                3D Reconstruction and Computer Vision.
+              </p>
             </div>
-
-
-
-
-            <div class="row experience">
-
-              <div class="col-auto text-center flex-column d-none d-sm-flex">
-                <div class="row h-50">
-                  <div class="col border-right">&nbsp;</div>
-                  <div class="col">&nbsp;</div>
-                </div>
-                <div class="m-2">
-                  <span class="badge badge-pill border ">&nbsp;</span>
-                </div>
-                <div class="row h-50">
-                  <div class="col ">&nbsp;</div>
-                  <div class="col">&nbsp;</div>
-                </div>
-              </div>
-
-              <div class="col py-2">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex align-content-start">
-                      <div class="mr-2 mb-2"><a href="https://www.cuhk.edu.cn/en" target="_blank" rel="noopener"><img
-                            src="/media/icons/brands/cuhksz_logo.png" width="56px" height="56px"
-                            alt="Bayer Crop Science Co. Ltd." loading="lazy"></a></div>
-                      <div>
-
-
-                        <div class="section-subheading card-title exp-title text-muted my-0">Teaching Assistant
-                        </div>
-                        <div class="section-subheading card-title exp-company text-muted my-0"><a
-                            href="https://www.cuhk.edu.cn/en" target="_blank" rel="noopener">CUHKsz</a></div>
-                        <div class="text-muted exp-meta">
-                          Sep. 2024 –
-
-                          Jan. 2025
-
-
-                          <span class="middot-divider"></span>
-                          <span>Shenzhen, China</span>
-
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="card-text">Introduction to Computer Science: Programming Methodology</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-
-
-            <div class="row experience">
-
-              <div class="col-auto text-center flex-column d-none d-sm-flex">
-                <div class="row h-50">
-                  <div class="col border-right">&nbsp;</div>
-                  <div class="col">&nbsp;</div>
-                </div>
-                <div class="m-2">
-                  <span class="badge badge-pill border ">&nbsp;</span>
-                </div>
-                <div class="row h-50">
-                  <div class="col ">&nbsp;</div>
-                  <div class="col">&nbsp;</div>
-                </div>
-              </div>
-
-              <div class="col py-2">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex align-content-start">
-                      <div class="mr-2 mb-2"><a href="https://www.cuhk.edu.cn/en" target="_blank" rel="noopener"><img
-                            src="/media/icons/brands/cuhksz_logo.png" width="56px" height="56px"
-                            alt="Bayer Crop Science Co. Ltd." loading="lazy"></a></div>
-                      <div>
-
-
-                        <div class="section-subheading card-title exp-title text-muted my-0">Reviewer
-                        </div>
-                        <div class="section-subheading card-title exp-company text-muted my-0"><a
-                            href="https://www.cuhk.edu.cn/en" target="_blank" rel="noopener">RA-L, T-ASE</a></div>
-                        <div class="text-muted exp-meta">
-                          Jan. 2024 –
-
-                          now
-
-
-                          <span class="middot-divider"></span>
-                          <span>Peer Reviewer</span>
-
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="card-text">Micromanipulation based paper</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="row experience">
-
-              <div class="col-auto text-center flex-column d-none d-sm-flex">
-                <div class="row h-50">
-                  <div class="col border-right">&nbsp;</div>
-                  <div class="col">&nbsp;</div>
-                </div>
-                <div class="m-2">
-                  <span class="badge badge-pill border ">&nbsp;</span>
-                </div>
-                <div class="row h-50">
-                  <div class="col ">&nbsp;</div>
-                  <div class="col">&nbsp;</div>
-                </div>
-              </div>
-
-              <div class="col py-2">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex align-content-start">
-                      <div class="mr-2 mb-2"><a href="https://www.cuhk.edu.cn/en" target="_blank" rel="noopener"><img
-                            src="/media/icons/brands/cuhksz_logo.png" width="56px" height="56px"
-                            alt="Bayer Crop Science Co. Ltd." loading="lazy"></a></div>
-                      <div>
-
-
-                        <div class="section-subheading card-title exp-title text-muted my-0">Teaching Assistant
-                        </div>
-                        <div class="section-subheading card-title exp-company text-muted my-0"><a
-                            href="https://www.cuhk.edu.cn/en" target="_blank" rel="noopener">CUHKsz</a></div>
-                        <div class="text-muted exp-meta">
-                          Jan. 2023 –
-
-                          May. 2024
-
-
-                          <span class="middot-divider"></span>
-                          <span>Shenzhen, China</span>
-
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="card-text">Calculus II</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-            <div class="row experience">
-
-              <div class="col-auto text-center flex-column d-none d-sm-flex">
-                <div class="row h-50">
-                  <div class="col border-right">&nbsp;</div>
-                  <div class="col">&nbsp;</div>
-                </div>
-                <div class="m-2">
-                  <span class="badge badge-pill border ">&nbsp;</span>
-                </div>
-                <div class="row h-50">
-                  <div class="col ">&nbsp;</div>
-                  <div class="col">&nbsp;</div>
-                </div>
-              </div>
-
-              <div class="col py-2">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex align-content-start">
-                      <div class="mr-2 mb-2"><a href="https://www.cuhk.edu.cn/en" target="_blank" rel="noopener"><img
-                            src="/media/icons/brands/cuhksz_logo.png" width="56px" height="56px"
-                            alt="Bayer Crop Science Co. Ltd." loading="lazy"></a></div>
-                      <div>
-
-
-                        <div class="section-subheading card-title exp-title text-muted my-0">Teaching Assistant
-                        </div>
-                        <div class="section-subheading card-title exp-company text-muted my-0"><a
-                            href="https://www.cuhk.edu.cn/en" target="_blank" rel="noopener">CUHKsz</a></div>
-                        <div class="text-muted exp-meta">
-                          Sep. 2023 –
-
-                          Dec. 2023
-
-
-                          <span class="middot-divider"></span>
-                          <span>Shenzhen, China</span>
-
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="card-text">Calculus I</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-
-            <div class="row experience">
-
-              <div class="col-auto text-center flex-column d-none d-sm-flex">
-                <div class="row h-50">
-                  <div class="col ">&nbsp;</div>
-                  <div class="col">&nbsp;</div>
-                </div>
-                <div class="m-2">
-                  <span class="badge badge-pill border ">&nbsp;</span>
-                </div>
-                <div class="row h-50">
-                  <div class="col border-right">&nbsp;</div>
-                  <div class="col">&nbsp;</div>
-                </div>
-              </div>
-
-              <div class="col py-2">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex align-content-start">
-                      <div class="mr-2 mb-2"><a href="https://aidsrh.uic.edu.cn/" target="_blank" rel="noopener"><img
-                            src="/media/icons/brands/keylab.png" width="76px" height="76px"
-                            alt="Key Laboratory for Artificial Intelligence and Multi-Modal Data" loading="lazy"></a>
-                      </div>
-                      <div>
-
-
-                        <div class="section-subheading card-title exp-title text-muted my-0">Research Assistant</div>
-                        <div class="section-subheading card-title exp-company text-muted my-0"><a
-                            href="https://aidsrh.uic.edu.cn/" target="_blank" rel="noopener">Key Laboratory for
-                            Artificial Intelligence and Multi-Modal Data Processing of Department of Education of
-                            Guangdong Province</a></div>
-                        <div class="text-muted exp-meta">
-                          Sep. 2021 –
-
-                          Jun. 2023
-
-
-                          <span class="middot-divider"></span>
-                          <span>Zhuhai, China</span>
-
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="card-text">3D Reconstruction and Computer Vision</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="row experience">
-
-              <div class="col-auto text-center flex-column d-none d-sm-flex">
-                <div class="row h-50">
-                  <div class="col border-right">&nbsp;</div>
-                  <div class="col">&nbsp;</div>
-                </div>
-                <div class="m-2">
-                  <span class="badge badge-pill border ">&nbsp;</span>
-                </div>
-                <div class="row h-50">
-                  <div class="col ">&nbsp;</div>
-                  <div class="col">&nbsp;</div>
-                </div>
-              </div>
-
-              <div class="col py-2">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="d-flex align-content-start">
-                      <div class="mr-2 mb-2"><a href="https://funplus.com/" target="_blank" rel="noopener"><img
-                            src="/media/icons/brands/funplus.png" width="56px" height="56px"
-                            alt="Bayer Crop Science Co. Ltd." loading="lazy"></a></div>
-                      <div>
-
-
-                        <div class="section-subheading card-title exp-title text-muted my-0">Python Engineer(Intern)
-                        </div>
-                        <div class="section-subheading card-title exp-company text-muted my-0"><a
-                            href="https://funplus.com/" target="_blank" rel="noopener">FunPlus Inc.</a></div>
-                        <div class="text-muted exp-meta">
-                          Jun. 2021 –
-
-                          Sep. 2021
-
-
-                          <span class="middot-divider"></span>
-                          <span>Beijing, China</span>
-
-                        </div>
-                      </div>
-                    </div>
-
-
-                    <div class="card-text">Python Data Analysis, Cloud Database</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
           </div>
 
-
-
-        </div>
-
-
-      </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <section id="projects" class="home-section wg-portfolio  "  >
- <div class="home-section-bg " >
-   
- </div>
-  <div class="container">
-
-  
-    <div class="row  justify-content-center">
-    
-      
-        <div class="section-heading col-12 mb-3 text-center">
-          <h1 class="mb-0">Projects</h1>
-          
-        </div>
-      
-    
-  
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="col-12 ">
-
-  
-
-  
-
-    
-
-    
-    
-    
-    
-      
-      
-        
-      
-    
-
-    <span class="d-none default-project-filter">*</span>
-
-    
-    
-    <div class="project-toolbar">
-      <div class="project-filters">
-        <div class="btn-toolbar d-flex justify-content-center">
-          <div class="btn-group flex-wrap">
-            
-              
-              
-              
-                
-                  
-                
-              
-              <a href="#" data-filter="*" class="btn btn-primary btn-lg active">All</a>
-            
-              
-              
-              
-                
-                  
-                
-              
-              <a href="#" data-filter=".js-id-research-experiences" class="btn btn-primary btn-lg">Research Experiences</a>
-            
-              
-              
-              
-                
-                  
-                
-              
-              <a href="#" data-filter=".js-id-competitions" class="btn btn-primary btn-lg">Competitions</a>
-            
+          <div class="experience-card">
+            <div class="experience-logo">
+              <a href="https://theaiinstitute.com/" target="_blank">
+                <img src="https://www.ntu.edu.sg/ResourcePackages/NTU/assets/images/NTU_Logo.png" alt="Nanyang Technological University">
+              </a>
+            </div>
+            <div class="experience-details">
+              <div class="experience-header">
+                <div class="experience-title-company">
+                  <h3 class="experience-title">Research Intern</h3>
+                  <div class="experience-company">
+                    <a href="https://theaiinstitute.com/" class="accent-link">Nanyang Technological University</a>
+                  </div>
+                </div>
+                <div class="experience-meta">
+                  <div class="experience-duration">Jun 2022 — Sep 2022</div>
+                  <div class="experience-location">Remote</div>
+                </div>
+              </div>
+              <p class="experience-description">
+                Research on Medical Image Processing for Cervical Cancer image classification.
+              </p>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    
-  
 
-  <div class="isotope projects-container row js-layout-row project-showcase">
-
-    
-    
-
-    
-    
-    
-      
-    
-    
-    
-    
-      
-    
-
-    
-    
-    
-    
-    
-    
-
-    
-      
-        
-          <div class="col-12 isotope-item js-id-research-experiences">
-        
-        
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-<div class="col-lg-12 mb-5 view-showcase">
-  <div class="row align-items-center">
-    <div class="col-12 col-md-6">
-      <div class="section-subheading article-title mb-0 mt-0"><a href="/project/research1/" >Dynamic Formation Transformation and Obstacle Avoidance of Unmanned Vehicles</a></div>
-
-      
-      <div class="article-style">
-        <ul>
-<li>Nominated to the 15th National College Student Innovation and Entrepreneurship Annual Conference</li>
-<li>Realized autonomous obstacle avoidance based on slam and multi-vehicle communication through wireless networking, mainly implemented the control of unmanned vehicle through ros system</li>
-<li>Realized mapping and navigation functions with ros, and and conducted simulation tests with gazebo</li>
-</ul>
-
-      </div>
-      
-
-      <div class="btn-links">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-
-    </div>
-    <div class="col-12 col-md-6 order-first ">
-      
-
-      
-        
-        <a href="/project/research1/" >
-          <img src="/project/research1/featured_hu886acf3f459953b097897ea057e37aa9_220889_540x0_resize_q75_h2_lanczos.webp" height="527" width="540"
-              alt="Dynamic Formation Transformation and Obstacle Avoidance of Unmanned Vehicles" loading="lazy">
-        </a>
-      
-    </div>
-  </div>
-</div>
-
-      </div>
-    
-      
-        
-          <div class="col-12 isotope-item js-id-competitions">
-        
-        
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-<div class="col-lg-12 mb-5 view-showcase">
-  <div class="row align-items-center">
-    <div class="col-12 col-md-6">
-      <div class="section-subheading article-title mb-0 mt-0"><a href="/project/example/" >RoboMaster2021 Super Match Play Competition (Central Division)</a></div>
-
-      
-      <div class="article-style">
-        Responsible for the function realization of radar station, that is, using yolo model to identify enemy robots and mark them on our map.
-      </div>
-      
-
-      <div class="btn-links">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-
-    </div>
-    <div class="col-12 col-md-6 order-first ">
-      
-
-      
-        
-        <a href="/project/example/" >
-          <img src="/project/example/featured_hu1442f54ae9a75cd2c49f5f35d532891a_1220409_540x0_resize_q75_h2_lanczos.webp" height="359" width="540"
-              alt="RoboMaster2021 Super Match Play Competition (Central Division)" loading="lazy">
-        </a>
-      
-    </div>
-  </div>
-</div>
-
-      </div>
-    
-      
-        
-          <div class="col-12 isotope-item js-id-competitions">
-        
-        
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-<div class="col-lg-12 mb-5 view-showcase">
-  <div class="row align-items-center">
-    <div class="col-12 col-md-6">
-      <div class="section-subheading article-title mb-0 mt-0">The 6th Jiangsu Provincial Engineering Training Comprehensive Ability Competition for College Students</div>
-
-      
-      <div class="article-style">
-        Drew the aircraft model and calculated the aerodynamic characteristics with fluent, and produced simulation animations with 3DMax.
-      </div>
-      
-
-      <div class="btn-links">
-        
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-
-    </div>
-    <div class="col-12 col-md-6 order-first ">
-      
-
-      
-        
-        
-          <img src="/project/external-project/featured_hu84eeff404548e6e69c0ebe593e5c8c91_287195_540x0_resize_q75_h2_lanczos.webp" height="154" width="540"
-              alt="The 6th Jiangsu Provincial Engineering Training Comprehensive Ability Competition for College Students" loading="lazy">
-        
-      
-    </div>
-  </div>
-</div>
-
-      </div>
-    
-
-  </div>
-</div>
-
-
-  
-    </div>
-  
-
-  </div>
-</section> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 2024 -->
-<section id="featured" class="home-section wg-collection  ">
-  <div class="home-section-bg ">
-
-  </div>
-  <div class="container">
-
-
-    <div class="row  ">
-
-
-      <div
-        class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
-        <h1 class="mb-0">2024</h1>
-
-      </div>
-
-
-
-      <div class="col-12 col-lg-8">
-
-        <!-- ICRA24 -->
-        <div class="card-simple view-card">
-
-         <div class="article-metadata">
-
-           
-           
-           
-           
-           <div>
-             
-
-           <span >
-               Han YANG</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="First Author, CUHKsz"></i>, <span >
-               Yufei Jin</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Co-first Author, CUHKsz"></i>,
-               Guanqiao Shan</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="UofT"></i>,
-               Yibin Wang</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="CUHKsz"></i>,
-               Yongbin Zheng</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="CUHKsz"></i>,
-               Jiangfan Yu</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="CUHKsz"></i>,
-               Yu Sun</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="UofT"></i>,
-               Zhuoran Zhang</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Corresponding Author, CUHKsz"></i>
-           </div>
-           
-           
-
-           
-           <span class="article-date">
-             
-             
-               
-             
-             Jan. 2024
-           </span>
-           
-
-           
-           <span class="middot-divider"></span>
-           <span class="pub-publication">
-             
-               <em>2024 IEEE International Conference on Robotics and Automation[ICRA]</em> in Yokohama
-             
-           </span>
-           
-
-           
-
-           
-           
-           
-           
-
-           
-           
-
-         </div>
-
-         
-
-         
-         
-         
-           
-           <a href="https://simonhanyang.github.io/pub-web/microdepthcomp/" >
-             <div class="img-hover-zoom">
-               <img src="/publication/conference-paper/ICRA24/paper1-fig1.png" height="655" width="808"
-                   class="article-banner" alt="ICRA24" loading="lazy">
-             </div>
-           </a>
-         
-
-         <div class="section-subheading article-title mb-1 mt-3">
-           <a href="https://simonhanyang.github.io/pub-web/microdepthcomp/" >Weakly-Supervised Depth Completion during Robotic Micromanipulation from a Monocular Microscopic Image</a>
-         </div>
-
-         
-         <a href="https://simonhanyang.github.io/pub-web/microdepthcomp/"  class="summary-link">
-           <div class="article-style">
-             <p>Obtaining three-dimensional information, especially the z-axis depth information, is crucial for robotic micromanipulation. Due to the unavailability of depth sensors such as lidars in micromanipulation setups, traditional depth acquisition methods such as depth from focus or depth from defocus directly infer depth from microscopic images and suffer from the poor resolution. Alternatively, micromanipulation tasks obtain accurate depth information by detecting the contact between an end-effector and an object (e.g., a cell). Despite its high accuracy, only sparse depth data can be obtained due to its low efficiency. This paper aims to address the challenge of acquiring dense depth information during robotic cell micromanipulation. A weakly-supervised depth completion network is proposed to take cell image and sparse depth data obtained by contact detection as input to generate dense depth map. A two-stage data augmentation method is proposed to augment the sparse depth data, and the depth map is optimized by a network refinement method. The experimental results show that the depth prediction error is less than 0.3 um, which proves the accuracy and effectiveness of the method. This deep learning network pipeline can be seamlessly integrated with the robotic micromanipulation tasks to provide accurate depth information.</p>
-           </div>
-         </a>
-         
-
-         
-         <div class="btn-links"> 
-
-            <a class="btn btn-outline-primary btn-page-header btn-sm"
-              href="" target="_blank" rel="noopener">
-              PDF
+          <div class="experience-card">
+            <div class="experience-logo">
+              <a href="https://about.meta.com/realitylabs/" target="_blank">
+                <img src="data:image/png;base64,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" alt="FunPlus Inc.">
+              </a>
+            </div>
+            <div class="experience-details">
+              <div class="experience-header">
+                <div class="experience-title-company">
+                  <h3 class="experience-title">Python Engineer Intern</h3>
+                  <div class="experience-company">
+                    <a href="https://about.meta.com/realitylabs/" class="accent-link">FunPlus Inc.</a>
+                  </div>
+                </div>
+                <div class="experience-meta">
+                  <div class="experience-duration">Jun 2021 — Sep 2021</div>
+                  <div class="experience-location">Beijing, China</div>
+                </div>
+              </div>
+              <p class="experience-description">
+                Python Data Analysis, NLP, Cloud Database.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="posts" class="content-section">
+          <h2>Posts</h2>
+          <div class="posts-grid">
+            <div class="post-card">
+              <a href="posts/index.html" class="post-image-link">
+                <img src="https://ext.same-assets.com/286721865/4085199395.jpeg" alt="Helpful Resources" class="post-image">
+              </a>
+              <div class="post-details">
+                <a href="posts/index.html" class="post-title-link">
+                  <h3 class="post-title">Helpful Resources</h3>
+                </a>
+                <div class="post-meta">
+                  <span class="post-date">March 18, 2025</span>
+                  <span class="post-read-time">5 min read</span>
+                </div>
+                <p class="post-excerpt">
+                  A growing resource list that might be useful to researchers and graduate students. I plan to update this frequently.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="media" class="content-section">
+          <h2>Media Coverage</h2>
+          <div class="media-grid">
+            <a href="#" class="media-item">
+              <img src="https://cuhk.edu.cn/sites/webmaster.prod1.dpsite04.cuhk.edu.cn/files/zh-hans_logo.png" alt="CUHKsz SSE">
             </a>
-
-
-
-          <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
-            data-filename="https://simonhanyang.github.io/pub-web/microdepthcomp/">
-            Cite
-          </a>
-
-
-         </div>
-         
-
-       </div>
-
-       <!-- IEEE NSENS -->
-       <div class="card-simple view-card">
-
-        <div class="article-metadata">
-
-          
-          
-          
-          
-          <div>
-            
-
-          <span >
-              Han YANG</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="First Author, CUHKsz"></i>, <span >
-              Yufei Jin</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="CUHKsz"></i>,
-              Xinrui Wang</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="CUHKsz"></i>,
-              Zhuoran Zhang</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Corresponding Author, CUHKsz"></i>
           </div>
-          
-          
+        </section>
 
-          
-          <span class="article-date">
-            
-            
-              
-            
-            Feb. 2024
-          </span>
-          
-
-          
-          <span class="middot-divider"></span>
-          <span class="pub-publication">
-            
-              <em>2024 IEEE International Conference on Micro/Nano Sensors for AI, Healthcare and Robotics[IEEE-NSENS 24]</em>, Best Paper Award
-            
-          </span>
-          
-
-          
-
-          
-          
-          
-          
-
-          
-          
-
-        </div>
-
-        
-
-        
-        
-        
-          
-          <a href="/publication/conference-paper/" >
-            <div class="img-hover-zoom">
-              <img src="/publication/conference-paper/IEEE-NSEN24/ieeensen24.png" height="655" width="808"
-                  class="article-banner" alt="IEEENSENS" loading="lazy">
+        <section id="contact" class="content-section">
+          <h2>Contact</h2>
+          <div class="contact-info">
+            <div class="contact-address">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a8 8 0 0 0-8 8c0 1.892.402 3.13 1.5 4.5L12 22l6.5-7.5c1.098-1.37 1.5-2.608 1.5-4.5a8 8 0 0 0-8-8Z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>The Chinese University of Hong Kong, Shenzhen, 2001 Longxiang Blvd., Longgang District, Shenzhen</span>
             </div>
-          </a>
-        
-
-        <div class="section-subheading article-title mb-1 mt-3">
-          <a href="/publication/conference-paper/IEEE-NSEN24/" >Depth Estimation for Motile Cell under Monocular Microscopy Based on Fine-grained Classification</a>
-        </div>
-
-        
-        <a href="/publication/conference-paper/IEEE-NSEN24/"  class="summary-link">
-          <div class="article-style">
-            <p>Depth estimation in monocular microscopy poses significant challenges, particularly in estimating the depth of motile cells. The limited depth of field(DOF) of a microscope and the intrinsic movement of motile cells further add difficulties to the task. Traditional Depth from Focus (DFF) and Depth from Defocus (DFD) techniques are limited to time-consuming focus adjustments and complex dynamic defocusing models. Addressing these limitations, this paper models depth estimation as a multi-class classification task and introduces a fine-grained feature extraction block to discern subtle distinctions between focal planes. Our model achieves a 97.05% success rate in estimating the depth of motile sperm with a speed of 21 fps.</p>
           </div>
-        </a>
-        
-
-        
-        <div class="btn-links"> 
-
-           <a class="btn btn-outline-primary btn-page-header btn-sm"
-             href="" target="_blank" rel="noopener">
-             PDF
-           </a>
-
-
-
-         <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
-           data-filename="/publication/conference-paper/IEEE-NSEN24/">
-           Cite
-         </a>
-
-
-        </div>
-        
-
+          <div class="contact-map">
+            <div class="map-container">
+              <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=-71.09375536441804%2C42.36053958968067%2C-71.08864486217499%2C42.362619537482054&layer=mapnik"
+                frameborder="0"
+                scrolling="no">
+              </iframe>
+            </div>
+          </div>
+        </section>
       </div>
-
-      </div>
-
     </div>
+  </main>
 
-
-  </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section id="featured" class="home-section wg-collection  ">
-      <div class="home-section-bg ">
-
-      </div>
-      <div class="container">
-
-
-        <div class="row  ">
-
-
-          <div
-            class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
-            <h1 class="mb-0">2023</h1>
-
-          </div>
-
-
-
-          <div class="col-12 col-lg-8">
-
-            <!-- HQNet -->
-            <div class="card-simple view-card">
- 
-             <div class="article-metadata">
- 
-               
-               
-               
-               
-               <div>
-                 
- 
-               <span >
-                   Han YANG</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Program Leader"></i>, <span >
-                   Yongbin ZHENG</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip" title="Corresponding Programmer"></i>
-               </div>
-               
-               
- 
-               
-               <span class="article-date">
-                 
-                 
-                   
-                 
-                 Sep. 2023
-               </span>
-               
- 
-               
-               <span class="middot-divider"></span>
-               <span class="pub-publication">
-                 
-                   In <em>Medical Micro Robotics Lab(MMRL), CUHKsz</em>, <em>Robotics Automation System</em>
-                 
-               </span>
-               
- 
-               
- 
-               
-               
-               
-               
- 
-               
-               
- 
-             </div>
- 
-             
- 
-             
-             
-             
-               
-               <a href="/publication/conference-paper/" >
-                 <div class="img-hover-zoom">
-                   <img src="/publication/conference-paper/System/system.png" height="555" width="808"
-                       class="article-banner" alt="Robotics Automation System" loading="lazy">
-                 </div>
-               </a>
-             
- 
-             <div class="section-subheading article-title mb-1 mt-3">
-               <a href="" >Micromanipulation Robotics Automation System</a>
-             </div>
- 
-             
-             <a href=""  class="summary-link">
-               <div class="article-style">
-                 <p>The robotic micromanipulation system setup, as shown in Figure, consists of an inverted microscope (ECLIPSE Ti2, Nikon Inc.) equipped with a motorized XY-stage (ProScan, Prior Scientific Inc.). This stage provides a range of 75 mm and a resolution of 0.01 mu m. A 3-DOF motorized micromanipulator (uMp-285, Sensapex Inc.) is integrated to hold a glass micropipette for contact detection to obtain sparse depth. The micropipette is made of glass tubes with a micropipette puller (P-97, Sutter Inc.) and has a tip with outer diameter of 500 nm and inner diameter of 300 nm. Visual feedback is supplied by a camera (Basler acA1920-40u Inc.), enabling image-based visual servo control for micropipette tip localization and detection of cell surface deformation. All user interface interactions and deep learning model computations are managed by a computer with a GPU 3070Ti.</p>
-               </div>
-             </a>
-             
- 
-             
-             <div class="btn-links"> 
- 
- 
- 
- 
-             </div>
-             
- 
-           </div>
-
-          </div>
-
-        </div>
-
-
-      </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section id="featured" class="home-section wg-collection  ">
-      <div class="home-section-bg ">
-
-      </div>
-      <div class="container">
-
-
-        <div class="row  ">
-
-
-          <div
-            class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
-            <h1 class="mb-0">2022</h1>
-
-          </div>
-
-
-
-          <div class="col-12 col-lg-8">
-
-            <!-- HQNet -->
-            <div class="card-simple view-card">
-
-              <div class="article-metadata">
-
-
-
-
-
-                <div>
-
-
-                  <span>
-                    Han YANG</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip"
-                    title="First Author"></i>, <span>
-                    Teoh Teik Toe</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip"
-                    title="Corresponding Author"></i>
-                </div>
-
-
-
-
-                <span class="article-date">
-
-
-
-
-                  Sep. 2022
-                </span>
-
-
-
-                <span class="middot-divider"></span>
-                <span class="pub-publication">
-
-                  In <em>IEEE on International Conference on Biomedical Imaging, Signal Processing(ICBSP)</em>, <em>Oral
-                    Presentation</em>
-
-                </span>
-
-
-
-
-
-
-
-
-
-
-
-
-              </div>
-
-
-
-
-
-
-
-              <a href="/publication/conference-paper/">
-                <div class="img-hover-zoom">
-                  <img src="/publication/conference-paper/HQNet/HQNet.png" height="455" width="808"
-                    class="article-banner"
-                    alt="HQNet: An Efficient Convolutional Neural Network for Cervical Cancer Classification"
-                    loading="lazy">
-                </div>
-              </a>
-
-
-              <div class="section-subheading article-title mb-1 mt-3">
-                <a href="/publication/conference-paper/HQNet/HQNet.pdf">HQNet: An Efficient Convolutional Neural Network
-                  for Cervical Cancer Classification</a>
-              </div>
-
-
-              <a href="/publication/conference-paper/HQNet/HQNet.pdf" class="summary-link">
-                <div class="article-style">
-                  <p>With the rapid development of artificial intelligence, cancer cell classification recognition is
-                    also gradually intelligent. Although the classification and recognition methods for some common
-                    cancers are mature, Cervical Cancer, as a common cancer among middle-aged women, is often neglected
-                    in diagnosis because of the low incidence of malignant tumors. In recent years, the incidence of
-                    Cervical Cancer has been increasing year by year and has also gained attention. In this paper, an
-                    efficient deformable convolutional neural network system(HQNet) was constructed to identify Cervical
-                    Cancer cells with different degrees of development.</p>
-                </div>
-              </a>
-
-
-
-              <div class="btn-links">
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <a class="btn btn-outline-primary btn-page-header btn-sm"
-                  href="/publication/conference-paper/HQNet/HQNet.pdf" target="_blank" rel="noopener">
-                  PDF
-                </a>
-
-
-
-                <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
-                  data-filename="/publication/conference-paper/HQNet/cite.bib">
-                  Cite
-                </a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              </div>
-
-
-            </div>
-
-            <!-- WTBNeRF -->
-            <div class="card-simple view-card">
-
-              <div class="article-metadata">
-
-
-
-
-
-                <div>
-
-
-                  <span>Han YANG</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip"
-                    title="First Author"></i>,
-                  <span>Linchuuan TANG</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip"
-                    title="Second Author"></i>
-                  <span>Hui MA</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip"
-                    title="Third Author"></i>
-                  <span>Rongfeng DENG</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip"
-                    title="Fourth Author"></i>
-                  <span>Hui ZHANG</span><i class="author-notes fas fa-info-circle" data-toggle="tooltip"
-                    title="Corresponding Author"></i>
-                </div>
-
-
-
-
-                <span class="article-date">
-
-
-
-
-                  Aug. 2022
-                </span>
-
-
-
-                <span class="middot-divider"></span>
-                <span class="pub-publication">
-
-                  In <em>International conference on the Efficiency and Performance Engineering Network(TEPEN)</em>
-
-                </span>
-
-
-
-
-
-
-
-
-
-
-
-
-              </div>
-
-
-
-
-
-
-
-              <a href="/publication/conference-paper/">
-                <div class="img-hover-zoom">
-                  <img src="/publication/conference-paper/WTBNeRF/WTBNeRF.png" height="455" width="808"
-                    class="article-banner" alt="WTBNeRF: Wind Turbine Blade 3D Reconstruction by Neural Radiance Fields"
-                    loading="lazy">
-                </div>
-              </a>
-
-
-              <div class="section-subheading article-title mb-1 mt-3">
-                <a href="https://link.springer.com/chapter/10.1007/978-3-031-26193-0_60">WTBNeRF: Wind Turbine Blade 3D
-                  Reconstruction by Neural Radiance Fields</a>
-              </div>
-
-
-              <a href="https://link.springer.com/chapter/10.1007/978-3-031-26193-0_60" class="summary-link">
-                <div class="article-style">
-                  <p>The Neural radiation field for scene rendering is gradually be- coming a widely used method in
-                    novel view synthesis task. With the gradual popularization of wind turbines, the requirement for
-                    integrity detection of wind turbines operating in natural or extreme environments is gradually
-                    increasing. In order to better complete the state detection of wind turbines, rendering real wind
-                    turbine scenes and 3D reconstruction of wind turbines become crucial. For the original neural
-                    radiation field method, the scene or object with a large number of features or complex textures is
-                    required. But for wind turbines, the surface is too smooth and texture-free, which creates blurring
-                    and ghosting in the scene. The method we use, called WTBNeRF is a network dedicated to wind turbine
-                    scene rendering and 3D reconstruction of wind turbines. We use conical truncated cone rays for more
-                    detailed coverage of individual pixel ranges than single pixel-centered rays, effectively reducing
-                    jaggedness and blur- ring in smooth, low-texture wind turbine scenes. At the same time, get- ting
-                    accurate camera pose for low-texture objects and scenes is also a challenge. We use a pre-trained
-                    camera pose estimation neural radiation field network to predict the camera pose of the data set,
-                    which reduces the requirement of knowing the real camera parameters of the data in advance.
-                    Moreover, we simplify the network structure in the network design, so that the network training time
-                    is also significantly improved, and the speed is about 10 times faster than NeRF for the multi-scale
-                    wind turbine dataset we produced.</p>
-                </div>
-              </a>
-
-
-
-              <div class="btn-links">
-
-
-
-
-
-
-
-
-
-
-
-
-
-                <a class="btn btn-outline-primary btn-page-header btn-sm"
-                  href="https://link.springer.com/chapter/10.1007/978-3-031-26193-0_60" target="_blank" rel="noopener">
-                  PDF
-                </a>
-
-
-
-                <a href="#" class="btn btn-outline-primary btn-page-header btn-sm js-cite-modal"
-                  data-filename="/publication/conference-paper/WTBNeRF/cite.bib">
-                  Cite
-                </a>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              </div>
-
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-      </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section id="section-markdown" class="home-section wg-markdown  ">
-      <div class="home-section-bg ">
-
-      </div>
-      <div class="container">
-
-
-        <div class="row  justify-content-center">
-
-
-          <div class="section-heading col-12 mb-3 text-center">
-            <h1 class="mb-0">Gallery</h1>
-
-          </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <div class="col-12">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="gallery-grid">
-
-
-
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--medium">
-                <a data-fancybox="gallery-demo" href="/media/albums/han/han-icra.jpg">
-                  <!-- <img
-                    src="/media/albums/demo/chris-montgomery-smgTvepind4-unsplash_hu68f1f4ae312ace90ad56e06a7b965ca9_245831_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="chris-montgomery-smgTvepind4-unsplash.jpg" width="750" height="563"> -->
-                  <img
-                    src="/media/albums/han/han-icra.jpg"
-                    loading="lazy" alt="/media/albums/han/han-icra.jpg" width="750" height="563">
-                  </a>
-              </div>
-
-
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--full">
-                <a data-fancybox="gallery-demo" href="/media/albums/han/japan.jpg">
-                  <!-- <img
-                    src="/media/albums/demo/dan-gold-4_jhDO54BYg-unsplash-f_hubb57eb7d78eb9d6871b4f982a9cfe98b_447788_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="dan-gold-4_jhDO54BYg-unsplash-f.jpg" width="750" height="500"> -->
-                  <img
-                    src="/media/albums/han/japan.jpg"
-                    loading="lazy" alt="/media/albums/han/japan.jpg" width="750" height="500">
-                </a>
-              </div>
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--medium">
-                <a data-fancybox="gallery-demo" href="/media/albums/han/changsha.jpg">
-                  <!-- <img
-                    src="/media/albums/demo/fotografierende-333oj7zFsdg-unsplash_hu596cc7cd654d6dbe93ef5a0a61cb3766_116195_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="fotografierende-333oj7zFsdg-unsplash.jpg" width="750" height="500"> -->
-                  <img
-                    src="/media/albums/han/changsha.jpg"
-                    loading="lazy" alt="/media/albums/han/changsha.jpg" width="750" height="500">
-                </a>
-              </div>
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--medium">
-                <a data-fancybox="gallery-demo"
-                  href="/media/albums/han/dog.jpg">
-                  <!-- <img
-                    src="/media/albums/demo/glenn-carstens-peters-npxXWgQ33ZQ-unsplash_hufe7234d721dea2d4376339533ed0a7b7_115372_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg" width="750" height="499"> -->
-                  <img
-                    src="/media/albums/han/dog.jpg"
-                    loading="lazy" alt="/media/albums/han/dog.jpg" width="750" height="499">
-                </a>
-              </div>
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--medium">
-                <a data-fancybox="gallery-demo" href="/media/albums/han/feiji.jpg">
-                  <!-- <img
-                    src="/media/albums/demo/joseph-gonzalez-zcUgjyqEwe8-unsplash_hu0da53bf391414dd35b860edb2d47ae67_331376_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="joseph-gonzalez-zcUgjyqEwe8-unsplash.jpg" width="580" height="750"> -->
-                  <img
-                    src="/media/albums/han/feiji.jpg"
-                    loading="lazy" alt="/media/albums/han/feiji.jpg" width="580" height="750">
-                </a>
-              </div>
-
-
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--large">
-                <a data-fancybox="gallery-demo" href="/media/albums/han/hengbin.jpg">
-                  <!-- <img
-                    src="/media/albums/demo/matthew-osborn-wMRIcT86SWU-unsplash-l_hu5617109cd94ff53d835059e892c0ab5d_398024_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="matthew-osborn-wMRIcT86SWU-unsplash-l.jpg" width="750" height="500"> -->
-                  <img
-                    src="/media/albums/han/hengbin.jpg"
-                    loading="lazy" alt="/media/albums/han/hengbin.jpg" width="750" height="500">
-                </a>
-              </div>
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--medium">
-                <a data-fancybox="gallery-demo" href="/media/albums/han/ieeenano24.jpg">
-                  <!-- <img
-                    src="/media/albums/demo/PANA1675PANA1806Z30_5431-Pano-unsplash_huf31154e65ea96c8a82fc6be8f5248926_904446_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="PANA1675PANA1806Z30_5431-Pano-unsplash.jpg" width="500" height="750"> -->
-                  <img
-                    src="/media/albums/han/ieeenano24.jpg"
-                    loading="lazy" alt="/media/albums/han/ieeenano24.jpg" width="500" height="750">
-                </a>
-              </div>
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--medium">
-                <a data-fancybox="gallery-demo" href="/media/albums/han/mahui.jpg">
-                  <!-- <img
-                    src="/media/albums/demo/PANA1798-unsplash_hu5981b87e522870427e4a306d6618c5d9_995362_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="PANA1798-unsplash.jpg" width="500" height="750"> -->
-                  <img
-                    src="/media/albums/han/mahui.jpg"
-                    loading="lazy" alt="/media/albums/han/mahui.jpg" width="500" height="750">
-                </a>
-              </div>
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--medium">
-                <a data-fancybox="gallery-demo" href="/media/albums/demo/PANA1806Z30_5431-Pano-unsplash.jpg">
-                  <img
-                    src="/media/albums/demo/PANA1806Z30_5431-Pano-unsplash_hub33b50544a7a7edf9ec709a91b55ca82_996066_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="PANA1806Z30_5431-Pano-unsplash.jpg" width="750" height="500">
-                </a>
-              </div>
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--medium">
-                <a data-fancybox="gallery-demo" href="/media/albums/demo/PANA2351-Pano-unsplash.jpg">
-                  <img
-                    src="/media/albums/demo/PANA2351-Pano-unsplash_hu6111def78674e35cc947c236e0f65dac_799517_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="PANA2351-Pano-unsplash.jpg" width="671" height="750">
-                </a>
-              </div>
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--medium">
-                <a data-fancybox="gallery-demo" href="/media/albums/demo/PANA2354-Pano-unsplash.jpg">
-                  <img
-                    src="/media/albums/demo/PANA2354-Pano-unsplash_hueb507a65a8663dc62743d5a197c15e06_1044557_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="PANA2354-Pano-unsplash.jpg" width="653" height="750">
-                </a>
-              </div>
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--medium">
-                <a data-fancybox="gallery-demo" href="/media/albums/demo/PANA2400-unsplash.jpg">
-                  <img
-                    src="/media/albums/demo/PANA2400-unsplash_hu6838c371765d7cbdd32704fd10263600_931044_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="PANA2400-unsplash.jpg" width="750" height="500">
-                </a>
-              </div>
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--medium">
-                <a data-fancybox="gallery-demo" href="/media/albums/demo/priscilla-du-preez-K8XYGbw4Ahg-unsplash.jpg">
-                  <img
-                    src="/media/albums/demo/priscilla-du-preez-K8XYGbw4Ahg-unsplash_huef8cdcc68a376950d1b1bcb089263869_96811_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="priscilla-du-preez-K8XYGbw4Ahg-unsplash.jpg" width="750" height="500">
-                </a>
-              </div>
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--medium">
-                <a data-fancybox="gallery-demo" href="/media/albums/demo/Z30_0929-unsplash.jpg">
-                  <img
-                    src="/media/albums/demo/Z30_0929-unsplash_hu584e3ede8f8422fc8b40a2e08810a7d6_384134_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="Z30_0929-unsplash.jpg" width="500" height="750">
-                </a>
-              </div>
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--medium">
-                <a data-fancybox="gallery-demo" href="/media/albums/demo/Z30_3986-unsplash.jpg">
-                  <img
-                    src="/media/albums/demo/Z30_3986-unsplash_hudca934bb58f9b6e7950cb2fc2040e975_209677_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="Z30_3986-unsplash.jpg" width="750" height="500">
-                </a>
-              </div>
-
-
-
-
-
-
-
-
-              <div class="gallery-item gallery-item--medium">
-                <a data-fancybox="gallery-demo" href="/media/albums/demo/Z30_5431-Pano-unsplash.jpg">
-                  <img
-                    src="/media/albums/demo/Z30_5431-Pano-unsplash_hudaeff48136ce60da181ac564f75a7424_779243_750x750_fit_q75_h2_lanczos.webp"
-                    loading="lazy" alt="Z30_5431-Pano-unsplash.jpg" width="637" height="750">
-                </a>
-              </div>
-
-
-            </div>
-
-
-          </div>
-
-
-
-
-        </div>
-
-
-      </div>
-    </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <section id="contact" class="home-section wg-contact  ">
-      <div class="home-section-bg ">
-
-      </div>
-      <div class="container">
-
-
-        <div class="row  ">
-
-
-          <div
-            class="section-heading col-12 col-lg-4 mb-3 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
-            <h1 class="mb-0">Contact</h1>
-
-          </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <div class="col-12 col-lg-8">
-            <p>Feel free to contact me :)</p>
-
-
-
-
-
-
-
-
-            <!-- <div class="mb-3">
-              <form name="contact" method="POST" netlify netlify-honeypot="_gotcha">
-                <div class="form-group form-inline">
-                  <label class="sr-only" for="inputName">Name</label>
-                  <input type="text" name="name" class="form-control w-100" id="inputName" placeholder="Name" required>
-                </div>
-                <div class="form-group form-inline">
-                  <label class="sr-only" for="inputEmail">Email</label>
-                  <input type="email" name="email" class="form-control w-100" id="inputEmail" placeholder="Email"
-                    required>
-                </div>
-                <div class="form-group">
-                  <label class="sr-only" for="inputMessage">Message</label>
-                  <textarea name="message" class="form-control" id="inputMessage" rows="5" placeholder="Message"
-                    required></textarea>
-                </div>
-
-                <div class="d-none">
-                  <label>Do not fill this field unless you are a bot: <input name="_gotcha"></label>
-                </div>
-
-                <button type="submit" class="btn btn-primary px-3 py-2 w-100">Send</button>
-              </form>
-            </div> -->
-
-
-            <ul class="fa-ul">
-
-
-              <li>
-                <i class="fa-li fas fa-envelope fa-2x" aria-hidden="true"></i>
-                <span id="person-email"><a
-                    href="mailto:hanyang12@link.cuhk.edu.cn">hanyang12 [at] link [dot] cuhk [dot] edu [dot] cn</a></span>
-              </li>
-
-
-
-              <!-- <li>
-                <i class="fa-li fas fa-phone fa-2x" aria-hidden="true"></i>
-                <span id="person-telephone"><a href="tel:xxx">&#43;86 189 xxxx 4689</a></span>
-              </li> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-              <li>
-                <i class="fa-li fab fa-whatsapp fa-2x" aria-hidden="true"></i>
-                <a href="https://twitter.com/Simon19775100">simon19775100</a>
-              </li>
-
-
-
-
-
-
-
-
-
-
-
-
-              <li>
-                <i class="fa-li fab fa-instagram fa-2x" aria-hidden="true"></i>
-                <a href="https://www.instagram.com/simonhanyang/" target="_blank" rel="noopener">simonhanyang</a>
-              </li>
-
-
-            </ul>
-
-
-
-          </div>
-
-
-
-        </div>
-
-
-      </div>
-    </section>
-
-
-
-
-  </div>
-
-  <div class="page-footer">
-
-
+  <footer class="site-footer">
     <div class="container">
-      <footer class="site-footer">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <p class="powered-by copyright-license-text">
-          © 2023 Simon YANG. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0"
-            rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
-        </p>
-
-
-        <p class="powered-by footer-license-icons">
-          <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank"
-            aria-label="Creative Commons">
-            <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
-            <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
-
-            <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
-
-
-            <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
-
-          </a>
-        </p>
-
-
-
-
-
-        <p class="powered-by">
-
-
-
-
-
-
-
-
-
-          Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank"
-            rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes"
-            target="_blank" rel="noopener">open source</a> website builder that empowers creators.
-
-        </p>
-      </footer>
-
-    </div>
-
-  </div>
-
-
-
-
-  <script src="/js/vendor-bundle.min.f64289d8217e08e3afcd597d60836062.js"></script>
-
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"
-    integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js"
-    integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew=="
-    crossorigin="anonymous"></script>
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"
-    integrity="sha512-uURl+ZXMBrF4AwGaWmEetzrd+J5/8NRkWAvJx5sbPSSuOb0bZLqf+tOzniObO00BjHa/dD7gub9oCGMLPQHtQA=="
-    crossorigin="anonymous"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <script id="search-hit-fuse-template" type="text/x-template">
-    <div class="search-hit" id="summary-{{key}}">
-      <div class="search-hit-content">
-        <div class="search-hit-name">
-          <a href="{{relpermalink}}">{{title}}</a>
-          <div class="article-metadata search-hit-type">{{type}}</div>
-          <p class="search-hit-description">{{snippet}}</p>
-        </div>
+      <div class="footer-content">
+        © 2025 Han Yang | 愿未来胜过往
       </div>
     </div>
-  </script>
+  </footer>
 
-  <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js"
-    integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw=="
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js"
-    integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg=="
-    crossorigin="anonymous"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <script id="page-data" type="application/json">{"use_headroom":false}</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <script src="/en/js/wowchemy.min.3322c0d94f0e691b0b24c63f4c41064b.js"></script>
-
-
-
-
-
-
-
-
-  <div id="modal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Cite</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-
-          <pre><code></code></pre>
-        </div>
-        <div class="modal-footer">
-          <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
-            <i class="fas fa-copy"></i> Copy
-          </a>
-          <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
-            <i class="fas fa-download"></i> Download
-          </a>
-          <div id="modal-error"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
 </body>
-
 </html>

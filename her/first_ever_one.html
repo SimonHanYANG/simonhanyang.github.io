@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simon Han YANG</title>
+    <meta name="language" content="zh-CN" />
+    <meta name="title" content="Simon Han YANG" />
+    <meta
+      name="github"
+      content="https://github.com/sun0225SUN/Awesome-Love-Code"
+    />
+    <meta
+      name="describe"
+      content="First ever for her. Hope success."
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://cdn.jsdelivr.net/gh/sun0225SUN/photos/img/20210715233345.png"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background: #F7DE98;
+      }
+
+      .container {
+        color: white;
+        text-align: center;
+        width: 500px;
+        height: 600px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <canvas id="c"></canvas>
+      <script>
+        var b = document.body;
+        var c = document.getElementsByTagName("canvas")[0];
+        var a = c.getContext("2d");
+        document.body.clientWidth;
+      </script>
+      <script>
+        with ((m = Math)) (C = cos), (S = sin), (P = pow), (R = random);
+        c.width = c.height = f = 600;
+        h = -250;
+        function p(a, b, c) {
+          if (c > 60)
+            return [
+              S(a * 7) * (13 + 5 / (0.2 + P(b * 4, 4))) - S(b) * 50,
+              b * f + 50,
+              625 + C(a * 7) * (13 + 5 / (0.2 + P(b * 4, 4))) + b * 400,
+              a * 1 - b / 2,
+              a,
+            ];
+          A = a * 2 - 1;
+          B = b * 2 - 1;
+          if (A * A + B * B < 1) {
+            if (c > 37) {
+              n = (j = c & 1) ? 6 : 4;
+              o = 0.5 / (a + 0.01) + C(b * 125) * 3 - a * 300;
+              w = b * h;
+              return [
+                o * C(n) + w * S(n) + j * 610 - 390,
+                o * S(n) - w * C(n) + 550 - j * 350,
+                1180 + C(B + A) * 99 - j * 300,
+                0.4 -
+                  a * 0.1 +
+                  P(1 - B * B, -h * 6) * 0.15 -
+                  a * b * 0.4 +
+                  C(a + b) / 5 +
+                  P(C((o * (a + 1) + (B > 0 ? w : -w)) / 25), 30) *
+                    0.1 *
+                    (1 - B * B),
+                o / 1e3 + 0.7 - o * w * 3e-6,
+              ];
+            }
+            if (c > 32) {
+              c = c * 1.16 - 0.15;
+              o = a * 45 - 20;
+              w = b * b * h;
+              z = o * S(c) + w * C(c) + 620;
+              return [
+                o * C(c) - w * S(c),
+                28 + C(B * 0.5) * 99 - b * b * b * 60 - z / 2 - h,
+                z,
+                (b * b * 0.3 + P(1 - A * A, 7) * 0.15 + 0.3) * b,
+                b * 0.7,
+              ];
+            }
+            o = A * (2 - b) * (80 - c * 2);
+            w =
+              99 -
+              C(A) * 120 -
+              C(b) * (-h - c * 4.9) +
+              C(P(1 - b, 7)) * 50 +
+              c * 2;
+            z = o * S(c) + w * C(c) + 700;
+            return [
+              o * C(c) - w * S(c),
+              B * 99 - C(P(b, 7)) * 50 - c / 3 - z / 1.35 + 450,
+              z,
+              (1 - b / 1.2) * 0.9 + a * 0.1,
+              P(1 - b, 20) / 4 + 0.05,
+            ];
+          }
+        }
+        // Custom color calculation function to enhance contrast
+        function getColor(shade) {
+          // Map shade value to RGB
+          // We'll start with our target color #FCD337 (252, 211, 55) for mid values
+          if (shade > 0.8) {
+            return "#FFDB17"; // Brightest highlights
+          } else if (shade > 0.65) {
+            return "#FFD100"; // Highlights
+          } else if (shade > 0.5) {
+            return "#FFC700"; // Light midtones
+          } else if (shade > 0.35) {
+            return "#E8B800"; // Dark midtones
+          } else if (shade > 0.2) {
+            return "#D1A500"; // Light shadows
+          } else {
+            return "#BA9200"; // Deepest shadows
+          }
+        }
+
+        setInterval(
+          'for(i=0;i<1e4;i++)if(s=p(R(),R(),i%46/.74)){z=s[2];x=~~(s[0]*f/z-h);y=~~(s[1]*f/z-h);if(!m[q=y*f+x]|m[q]>z)m[q]=z,a.fillStyle=(function(v){if(v>0.8)return"#FFDB17";if(v>0.65)return"#FFD100";if(v>0.5)return"#FFC700";if(v>0.35)return"#E8B800";if(v>0.2)return"#D1A500";return"#BA9200"})(s[3]),a.fillRect(x,y,1,1)}',
+          0
+        );
+      </script>
+    </div>
+  </body>
+</html>

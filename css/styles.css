@@ -671,8 +671,38 @@ img {
 }
 
 @media (max-width: 767px) {
+  /* 移动端导航菜单样式 */
   .main-nav {
     display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--color-dark);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-nav.active {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .main-nav li {
+    width: 100%;
+  }
+
+  .main-nav a {
+    padding: 0.75rem 1.5rem;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .main-nav li:last-child a {
+    border-bottom: none;
   }
 
   .mobile-menu-toggle {
@@ -685,5 +715,14 @@ img {
 
   .news-list {
     max-height: 300px;
+  }
+
+  /* 确保头部在移动端正确显示 */
+  .site-header {
+    position: relative;
+  }
+
+  .header-content {
+    position: relative;
   }
 }

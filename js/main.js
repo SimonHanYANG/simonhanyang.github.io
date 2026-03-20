@@ -7,7 +7,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (mobileMenuToggle && mainNav) {
     mobileMenuToggle.addEventListener('click', function() {
-      mainNav.style.display = mainNav.style.display === 'block' ? 'none' : 'block';
+      // 切换 active 类而不是直接修改 display
+      mainNav.classList.toggle('active');
+    });
+
+    // 点击导航链接后关闭菜单
+    const navLinks = mainNav.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mainNav.classList.remove('active');
+      });
+    });
+
+    // 点击页面其他地方关闭菜单
+    document.addEventListener('click', function(e) {
+      if (!mainNav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+        mainNav.classList.remove('active');
+      }
     });
   }
 

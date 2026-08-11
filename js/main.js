@@ -1,17 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('DOM Content Loaded');
-  
   // Mobile menu toggle
   const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
   const mainNav = document.querySelector('.main-nav');
 
   if (mobileMenuToggle && mainNav) {
     mobileMenuToggle.addEventListener('click', function() {
-      // 切换 active 类而不是直接修改 display
       mainNav.classList.toggle('active');
     });
 
-    // 点击导航链接后关闭菜单
     const navLinks = mainNav.querySelectorAll('a');
     navLinks.forEach(link => {
       link.addEventListener('click', function() {
@@ -19,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
 
-    // 点击页面其他地方关闭菜单
     document.addEventListener('click', function(e) {
       if (!mainNav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
         mainNav.classList.remove('active');
@@ -42,15 +37,43 @@ document.addEventListener('DOMContentLoaded', function() {
           block: 'start'
         });
 
-        // Update URL without page reload
         history.pushState(null, null, targetId);
       }
     });
   });
 
-  // Publications pagination - wait a bit for everything to load
+  // Scroll reveal animations
+  initScrollReveal();
+
+  // Publications pagination
   setTimeout(initPublicationsPagination, 100);
 });
+
+function initScrollReveal() {
+  const revealElements = document.querySelectorAll('.reveal, .reveal-stagger');
+
+  if (!revealElements.length) return;
+
+  // Respect reduced motion preference
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    revealElements.forEach(el => el.classList.add('visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  revealElements.forEach(el => observer.observe(el));
+}
 
 function initPublicationsPagination() {
   console.log('Initializing publications pagination...');

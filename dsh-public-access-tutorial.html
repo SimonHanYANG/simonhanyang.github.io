@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>把 dsh 部署到公网访问 · 完整教程</title>
+<style>
+  :root{
+    --ink:#1c1f2b;
+    --muted:#5b6070;
+    --accent:#4f46e5;
+    --accent2:#0ea5a6;
+    --bg:#f6f7fb;
+    --card:#ffffff;
+    --line:#e6e8f0;
+    --codebg:#0d1117;
+    --coder:#e6edf3;
+    --ok:#0f9d58;
+    --warn:#b45309;
+    --warnbg:#fff8e6;
+    --danger:#b91c1c;
+    --dangerbg:#fff0f0;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font:16px/1.7 "Segoe UI","PingFang SC","Microsoft YaHei",-apple-system,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px 80px}
+  /* hero */
+  header.hero{
+    background:linear-gradient(135deg,#4f46e5 0%,#0ea5a6 100%);
+    color:#fff;
+    padding:56px 24px 48px;
+    text-align:center;
+  }
+  header.hero .kicker{
+    display:inline-block;background:rgba(255,255,255,.18);
+    border:1px solid rgba(255,255,255,.35);
+    padding:5px 14px;border-radius:999px;font-size:13px;letter-spacing:.5px;margin-bottom:18px;
+  }
+  header.hero h1{margin:0 0 12px;font-size:34px;font-weight:800;letter-spacing:.5px}
+  header.hero p{margin:0 auto;max-width:640px;font-size:16px;opacity:.94}
+  /* section shell */
+  section{margin-top:40px}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+  .sec-num{
+    flex:none;width:40px;height:40px;border-radius:12px;
+    background:var(--accent);color:#fff;font-weight:800;font-size:19px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .sec-head h2{margin:0;font-size:24px;font-weight:800}
+  .sec-head .sub{color:var(--muted);font-size:14px;margin-top:2px}
+  /* card */
+  .card{
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    padding:22px 24px;margin-bottom:16px;box-shadow:0 1px 2px rgba(0,0,0,.03);
+  }
+  .card h3{margin:0 0 12px;font-size:18px;font-weight:700}
+  .card h3 .badge{
+    display:inline-block;margin-left:8px;font-size:12px;padding:2px 9px;border-radius:6px;
+    background:#eef0ff;color:var(--accent);font-weight:700;vertical-align:middle;
+  }
+  .card p{margin:0 0 10px}
+  .card ul,.card ol{margin:6px 0 4px;padding-left:22px}
+  .card li{margin-bottom:7px}
+  /* flow */
+  .flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center;margin:16px 0 6px}
+  .node{
+    background:#eef0ff;border:1px solid #d6d9f7;border-radius:10px;padding:8px 12px;
+    font-size:13px;font-weight:600;color:#34307a;
+  }
+  .node.hl{background:var(--codebg);color:var(--coder);border-color:#30363d}
+  .arrow{color:var(--accent);font-weight:800}
+  /* code */
+  .code{
+    background:var(--codebg);border-radius:12px;padding:16px 18px;overflow-x:auto;margin:12px 0;
+  }
+  .code pre{margin:0;font:14px/1.55 "JetBrains Mono","Fira Code",Consolas,"Courier New",monospace;color:var(--coder);white-space:pre}
+  .code .cm{color:#8b949e}
+  .code .kw{color:#ff7b72}
+  .code .str{color:#a5d6ff}
+  .code-lbl{display:flex;align-items:center;gap:8px;margin:16px 0 0}
+  .code-lbl .tag{
+    font-size:12px;font-weight:700;color:var(--accent2);background:#e6f7f8;
+    padding:2px 10px;border-radius:6px;letter-spacing:.3px;
+  }
+  .code-lbl .cmr{font-size:13px;color:var(--muted)}
+  /* callouts */
+  .note{border-radius:12px;padding:14px 16px;margin:14px 0;display:flex;gap:12px;align-items:flex-start}
+  .note .emo{font-size:20px;line-height:1.3;flex:none;margin-top:1px}
+  .note .body{font-size:14.5px}
+  .note .body b{display:block;margin-bottom:3px}
+  .note.ok{background:#edf9f1;border:1px solid #c7ecd3}
+  .note.ok b{color:var(--ok)}
+  .note.warn{background:var(--warnbg);border:1px solid #ffe2a8}
+  .note.warn b{color:var(--warn)}
+  .note.danger{background:var(--dangerbg);border:1px solid #f6c6c6}
+  .note.danger b{color:var(--danger)}
+  /* table */
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14.5px}
+  th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+  th{background:#f0f1f7;font-weight:700}
+  td kbd{background:#eef0ff;border:1px solid #d6d9f7;border-radius:5px;padding:1px 7px;font:13px monospace;color:#34307a}
+  /* toc */
+  .toc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 24px;margin-top:30px}
+  .toc b.t{display:block;font-size:15px;color:var(--muted);margin-bottom:10px;letter-spacing:.5px}
+  .toc a{color:var(--accent);text-decoration:none;font-weight:600}
+  .toc a:hover{text-decoration:underline}
+  .toc .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 20px}
+  .toc .item{margin:2px 0}
+  .foot{text-align:center;color:var(--muted);font-size:13px;margin-top:36px}
+  kbd.acct{background:#fff;border:1px solid var(--line);border-radius:8px;padding:4px 10px;font:14px monospace;color:var(--accent)}
+  .inline-code{background:#eef0ff;color:#34307a;border-radius:5px;padding:1px 6px;font:13.5px monospace}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="kicker">经验分享 · 从零到公网可访问</div>
+  <h1>把 dsh 部署到公网访问</h1>
+  <p>一台无公网 IP 的内网服务器，从「SSH 隧道本地访问」到「任意网络打开网址 + 账号密码登录」的完整过程与踩坑记录。</p>
+</header>
+
+<div class="wrap">
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <b class="t">目录</b>
+    <div class="grid">
+      <div class="item"><a href="#s0">0 · 方案选型：为什么不能只配 Nginx</a></div>
+      <div class="item"><a href="#s1">1 · 在服务器上配置 dsh</a></div>
+      <div class="item"><a href="#s2">2 · SSH 隧道本地访问</a></div>
+      <div class="item"><a href="#s3">3 · 公网访问 + 用户名密码</a></div>
+      <div class="item"><a href="#s4">4 · 踩过的坑（重点）</a></div>
+      <div class="item"><a href="#s5">5 · 日常维护与安全建议</a></div>
+      <div class="item"><a href="#s6">6 · 一键命令速查表</a></div>
+    </div>
+  </div>
+
+  <!-- 0 -->
+  <section id="s0">
+    <div class="sec-head">
+      <div class="sec-num">0</div>
+      <div>
+        <h2>方案选型</h2>
+        <div class="sub">先想清楚「公网入口」到底是什么</div>
+      </div>
+    </div>
+    <div class="card">
+      <p>很多人第一反应是「配个 Nginx 反向代理」。但<span class="inline-code">Nginx 反代 ≠ 公网可访问</span>：Nginx 只是在服务器本地把流量转发给 dsh，它自己<strong>没有公网 IP</strong>，外部流量根本到不了它。</p>
+      <p>缺的不是 Nginx，而是<strong>一台能被全网访问到的入口</strong>。服务器在局域网 / 内网又没有公网 IP 时，唯一免费可靠的办法是：</p>
+      <div class="note ok"><div class="emo">✅</div><div class="body"><b>用「隧道服务」当公网入口</b>在 dsh 所在服务器上装一个隧道客户端（如 Cloudflare 的 cloudflared），让它主动连出去，隧道服务商会给你一个公网网址。服务器无需公网 IP。</div></div>
+      <h3>最终架构</h3>
+      <div class="flow">
+        <div class="node">你的手机 / 任何电脑</div>
+        <div class="arrow">→</div>
+        <div class="node">公网网址<br><span style="font-weight:400">xxx.trycloudflare.com</span></div>
+        <div class="arrow">→</div>
+        <div class="node">内网服务器<br><span style="font-weight:400">cloudflared</span></div>
+        <div class="arrow">→</div>
+        <div class="node hl">Nginx 反代<br><span style="font-weight:400">127.0.0.1:8080</span></div>
+        <div class="arrow">→</div>
+        <div class="node hl">dsh web<br><span style="font-weight:400">127.0.0.1:3080</span></div>
+      </div>
+      <p class="note" style="margin-top:8px">简单说：浏览器 → 公网网址 → 隧道 → <strong>Nginx（负责改请求头 + 登录验证）</strong> → dsh。</p>
+    </div>
+  </section>
+
+  <!-- 1 -->
+  <section id="s1">
+    <div class="sec-head">
+      <div class="sec-num">1</div>
+      <div>
+        <h2>在服务器上配置 dsh</h2>
+        <div class="sub">让 dsh 在服务器本地起来</div>
+      </div>
+    </div>
+    <div class="card">
+      <p>dsh 的命令行通常自带 <span class="inline-code">web</span> 子命令，会启动 Web 界面并默认绑定 <span class="inline-code">127.0.0.1:3080</span>：</p>
+      <div class="code-lbl"><span class="tag">启动 dsh Web</span><span class="cmr">在服务器上执行</span></div>
+      <div class="code"><pre><span class="kw">dsh</span> web <span class="str">--no-open</span>
+<span class="cm"># 不带 --no-open 会自动尝试打开浏览器（服务器上一般没意义）</span>
+<span class="cm"># 默认监听 127.0.0.1:3080，可在配置里改 host/port</span></pre></div>
+      <p>确认它能用：服务器本机访问一下端口。</p>
+      <div class="code"><pre>curl -s -o /dev/null -w <span class="str">"%{http_code}\n"</span> http://localhost:3080
+<span class="cm"># 返回 200 即正常</span></pre></div>
+      <div class="note warn"><div class="emo">⚠️</div><div class="body"><b>需要模型 API Key</b>dsh 用大模型，要在配置里填好 <span class="inline-code">DEEPSEEK_API_KEY</span>（或通过 settings 配置），否则界面能开但没法对话。</div></div>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section id="s2">
+    <div class="sec-head">
+      <div class="sec-num">2</div>
+      <div>
+        <h2>SSH 隧道本地访问</h2>
+        <div class="sub">最基础、只有自己能用的方式</div>
+      </div>
+    </div>
+    <div class="card">
+      <p>服务器是内网，你在自己电脑上不能直接访问它。用 SSH 端口转发，把服务器上的 3080 映射到你电脑的 <span class="inline-code">localhost:3080</span>：</p>
+      <div class="code-lbl"><span class="tag">建立隧道</span><span class="cmr">在你本地电脑执行</span></div>
+      <div class="code"><pre>ssh -L <span class="str">3080:127.0.0.1:3080</span> 用户名@服务器地址</pre></div>
+      <p>然后本地浏览器打开 <span class="inline-code">http://localhost:3080</span> 就能用。</p>
+      <div class="note warn"><div class="emo">⚠️</div><div class="body"><b>局限</b>只有建立这条 SSH 隧道的这台电脑能访问；换台电脑 / 用手机流量就不行了。这就是为什么需要下一步的公网方案。</div></div>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section id="s3">
+    <div class="sec-head">
+      <div class="sec-num">3</div>
+      <div>
+        <h2>公网访问 + 用户名密码</h2>
+        <div class="sub">隧道 + Nginx + basic auth 三步走</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>3.1 安装 cloudflared 隧道<span class="badge">公网入口</span></h3>
+      <p>下载单文件可执行程序（按 CPU 架构选，这里以 x86_64 为例）：</p>
+      <div class="code-lbl"><span class="tag">下载</span></div>
+      <div class="code"><pre>cd <span class="str">~</span>
+curl -L -o cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+chmod +x cloudflared</pre></div>
+      <p>为了「关掉终端也继续跑」，放进 tmux 会话里（下面用会话名 <span class="inline-code">deepseek</span>）：</p>
+      <div class="code-lbl"><span class="tag">在 tmux 里启动隧道</span></div>
+      <div class="code"><pre>tmux new-window -t deepseek -n tunnel <span class="str">"cd ~ && ./cloudflared tunnel --url http://localhost:8080"</span>
+<span class="cm"># 启动后切到该窗口看网址：tmux a -t deepseek，按 Ctrl+B 再按 2</span></pre></div>
+      <p>运行日志里会出现一行公网网址：</p>
+      <div class="code"><pre>https://<span class="kw">chips-first-vic-breath</span>.trycloudflare.com</pre></div>
+      <div class="note ok"><div class="emo">✅</div><div class="body"><b>到这里已经能访问了</b>但直接用会踩到下面 4.2 的 403 问题，所以先看 3.2 把 Nginx 加上。</div></div>
+    </div>
+
+    <div class="card">
+      <h3>3.2 关键：加一层 Nginx 反代<span class="badge">解决 403</span></h3>
+      <p>dsh 对 <span class="inline-code">/api</span> 请求做了「浏览器信任围栏」：<strong>只认 Host 是本机（loopback）的请求</strong>，防止 DNS 重绑定攻击。隧道把公网域名当 Host 转发过去，dsh 就回 <span class="inline-code">403</span>。</p>
+      <p>解决办法：用 Nginx 在中间改写。它只绑定本机 <span class="inline-code">8080</span>，转发给 dsh 时把 <span class="inline-code">Host</span> 改成 <span class="inline-code">localhost</span>、并去掉浏览器的 <span class="inline-code">Origin</span> 头——dsh 就认为是本机请求了。这样<strong>公网网址怎么变都不用再动 dsh</strong>。</p>
+      <div class="code-lbl"><span class="tag">安装 Nginx + htpasswd 工具</span></div>
+      <div class="code"><pre>sudo apt-get update
+sudo apt-get install -y nginx apache2-utils</pre></div>
+      <div class="code-lbl"><span class="tag">Nginx 配置</span><span class="cmr">/etc/nginx/conf.d/dsh-proxy.conf</span></div>
+      <div class="code"><pre>server {
+    listen 127.0.0.1:8080;
+    server_name _;
+
+    auth_basic <span class="str">"dsh access"</span>;
+    auth_basic_user_file /etc/nginx/.htpasswd;
+
+    location / {
+        proxy_pass http://127.0.0.1:3080;
+        <span class="cm"># 关键：让 dsh 认为请求来自本机</span>
+        proxy_set_header Host localhost;
+        proxy_set_header Origin <span class="str">""</span>;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_buffering off;
+        proxy_read_timeout 3600s;
+    }
+    <span class="cm"># dsh 的 WebSocket 事件通道也要单独放行</span>
+    location ~ ^/api/events\.(mux|host)$ {
+        proxy_pass http://127.0.0.1:3080;
+        proxy_set_header Host localhost;
+        proxy_set_header Origin <span class="str">""</span>;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection <span class="str">"upgrade"</span>;
+        proxy_read_timeout 3600s;
+    }
+}</pre></div>
+      <p>启用并重载：</p>
+      <div class="code"><pre>rm -f /etc/nginx/sites-enabled/default
+nginx -t            <span class="cm"># 语法检查</span>
+nginx               <span class="cm"># 启动（或 service nginx start）</span></pre></div>
+    </div>
+
+    <div class="card">
+      <h3>3.3 设置用户名密码<span class="badge">强制登录</span></h3>
+      <p>dsh 能执行命令、读写服务器文件，<strong>裸奔到公网非常危险</strong>。给它套一层 HTTP 基本认证，访问必须先输账号密码。</p>
+      <div class="code-lbl"><span class="tag">创建密码文件</span><span class="cmr">用户名 simon，密码自定</span></div>
+      <div class="code"><pre>htpasswd -bc /etc/nginx/.htpasswd simon <span class="str">'你的密码'</span>
+nginx -s reload</pre></div>
+      <p><span class="inline-code">-b</span> 表示密码直接写在命令行，<span class="inline-code">-c</span> 表示新建文件。文件里存的是哈希，<strong>不含明文密码</strong>。</p>
+    </div>
+
+    <div class="card">
+      <h3>3.4 让隧道指向 Nginx<span class="badge">打通</span></h3>
+      <p>把 cloudflared 从直连 3080 改到 Nginx 的 8080：</p>
+      <div class="code"><pre>tmux kill-window -t deepseek:tunnel
+tmux new-window -t deepseek -n tunnel <span class="str">"cd ~ && ./cloudflared tunnel --url http://localhost:8080"</span></pre></div>
+      <p>从日志拿到新网址，浏览器打开，输入 <strong>simon / 密码</strong> 即可从任何网络使用。</p>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section id="s4">
+    <div class="sec-head">
+      <div class="sec-num">4</div>
+      <div>
+        <h2>踩过的坑（重点）</h2>
+        <div class="sub">这些才是真正花时间的部分</div>
+      </div>
+    </div>
+    <div class="card">
+      <ol>
+        <li><b>以为配 Nginx 就有公网访问</b>——不对。内网没公网 IP，必须先有「隧道」这个公网入口。</li>
+        <li><b>dsh 报 <span class="inline-code">transport failure for /api/host.listDirectory: HTTP 403</span></b>——这是最坑的一个。原因不是 403 本身，而是 dsh 的 Host 围栏：<span class="inline-code">Host</span> 头不是本机就拒绝，防 DNS 重绑定。隧道把公网域名当 Host 传过去，就被拒了。改 Nginx 把 <span class="inline-code">Host</span> 改成 <span class="inline-code">localhost</span> 即可。</li>
+        <li><b>只改 Host 还不够，Origin 也会拦</b>——dsh 还会校验浏览器发的 <span class="inline-code">Origin</span>，若不等于 Host 也拒绝。所以 Nginx 里要把 <span class="inline-code">Origin</span> 也去掉（<span class="inline-code">proxy_set_header Origin "";</span>）。</li>
+        <li><b>高权限接口被单独锁死</b>——<span class="inline-code">settings.* / credentials.* / agentPreset.* / host.openPath</span> 这些 dsh 默认只允许本机回环，任何远程都无法调用，这是 dsh 的安全设计，不要强行绕过。</li>
+        <li><b>cloudflared 启动时报 QUIC 预检 <span class="inline-code">hard_fail</span></b>——吓人，但常是误报。它检测的节点和实际连接的节点可能不是同一个，<strong>以日志里是否出现 <span class="inline-code">Registered tunnel connection</span> 为准</strong>，出现了就是连上了。</li>
+        <li><b>快速隧道网址会变</b>——免费、无账号的 trycloudflare 隧道每次重启都会换一个随机网址。好在：只要 <span class="inline-code">cloudflared</span> 一直跑着，网址就固定；想长期固定，换 ngrok 免费静态域名或买域名 + Cloudflare。</li>
+        <li><b>WebSocket 连不上</b>——dsh 界面的事件流走 <span class="inline-code">/api/events.mux</span> 和 <span class="inline-code">/api/events.host</span>，Nginx 必须转发 <span class="inline-code">Upgrade</span> / <span class="inline-code">Connection</span> 头（见 3.2 的第二个 location），否则页面卡在加载。</li>
+        <li><b>没有 <span class="inline-code">htpasswd</span> 命令</b>——Debian/Ubuntu 默认没有，要装 <span class="inline-code">apache2-utils</span>：<span class="inline-code">sudo apt-get install -y apache2-utils</span>。</li>
+        <li><b>改完不生效</b>——改 Nginx 配置要 <span class="inline-code">nginx -t</span> 检查、再 <span class="inline-code">nginx -s reload</span>；浏览器里若还看到旧的 403 页面，<span class="inline-code">Ctrl+F5</span> 强制刷新一次。</li>
+        <li><b>关终端进程就没了</b>——用 <span class="inline-code">tmux</span> 跑隧道（或 Nginx 用 systemd/service 托管），否则断开 SSH 就断连。</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section id="s5">
+    <div class="sec-head">
+      <div class="sec-num">5</div>
+      <div>
+        <h2>日常维护与安全建议</h2>
+        <div class="sub">用起来顺手、也不给自己挖坑</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>维护命令</h3>
+      <table>
+        <tr><th>想做什么</th><th>命令</th></tr>
+        <tr><td>查看当前公网网址</td><td><kbd>tmux capture-pane -p -t deepseek:tunnel</kbd> 然后找 <kbd>trycloudflare</kbd></td></tr>
+        <tr><td>重启隧道（会换网址）</td><td><kbd>tmux kill-window -t deepseek:tunnel</kbd> 再 <kbd>tmux new-window -t deepseek -n tunnel "cd ~ &amp;&amp; ./cloudflared tunnel --url http://localhost:8080"</kbd></td></tr>
+        <tr><td>改账号密码</td><td><kbd>htpasswd -b /etc/nginx/.htpasswd simon '新密码'</kbd> 然后 <kbd>nginx -s reload</kbd></td></tr>
+        <tr><td>改用户名</td><td><kbd>htpasswd -bc /etc/nginx/.htpasswd 新用户名 '密码'</kbd> 然后 <kbd>nginx -s reload</kbd></td></tr>
+        <tr><td>容器/机器重启后</td><td><kbd>nginx</kbd> 启动 Nginx；再按上面重启隧道</td></tr>
+      </table>
+      <div class="note danger"><div class="emo">🔴</div><div class="body"><b>安全提醒</b>dsh 能执行命令、访问文件、调用你的大模型 API。拿到网址又没设密码的人 = 能完全操控你的服务器。哪怕设了密码，也<strong>不要把这个公网网址+账号密码发给不信任的人</strong>；用隧道要选择熟习的来源，必要时加 IP 限制或改成短期内有效的隧道。</div></div>
+      <div class="note warn"><div class="emo">⚠️</div><div class="body"><b>「免费+无域名」的代价</b>快速隧道网址会变、且无在线率保证，适合个人临时用。想要固定域名和更稳定，建议买一个便宜域名走 Cloudflare，或租一台小 VPS 自己搭入口。</div></div>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section id="s6">
+    <div class="sec-head">
+      <div class="sec-num">6</div>
+      <div>
+        <h2>一键命令速查表</h2>
+        <div class="sub">按顺序复制即可完整搭建</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="code"><pre><span class="cm"># ============ 服务器上 ============</span>
+
+<span class="cm"># 1. 预装 Nginx + htpasswd 工具</span>
+sudo apt-get update &amp;&amp; sudo apt-get install -y nginx apache2-utils
+
+<span class="cm"># 2. 写 Nginx 反代配置（见 3.2），然后：</span>
+rm -f /etc/nginx/sites-enabled/default
+nginx -t &amp;&amp; nginx
+
+<span class="cm"># 3. 设置访问账号密码</span>
+htpasswd -bc /etc/nginx/.htpasswd simon <span class="str">'你的密码'</span>
+nginx -s reload
+
+<span class="cm"># 4. 装 cloudflared</span>
+cd <span class="str">~</span>
+curl -L -o cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+chmod +x cloudflared
+
+<span class="cm"># 5. 在 tmux 里跑隧道（指向 Nginx 8080）</span>
+tmux new-window -t deepseek -n tunnel <span class="str">"cd ~ &amp;&amp; ./cloudflared tunnel --url http://localhost:8080"</span>
+
+<span class="cm"># 6. 从日志取出网址</span>
+tmux capture-pane -p -t deepseek:tunnel | grep trycloudflare
+
+<span class="cm"># ============ 你本地电脑（可选，SSH 隧道调试用） ============</span>
+ssh -L <span class="str">3080:127.0.0.1:3080</span> 用户名@服务器地址   <span class="cm"># 然后打开 http://localhost:3080</span></pre></div>
+    </div>
+  </section>
+
+  <p class="foot">—— 愿你一次成功，少踩我踩过的坑 ——</p>
+</div>
+</body>
+</html>
